@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{f6703049-4826-47a4-b826-77f6e5e8d52d}" Name="TimeLog - Get Project Hours" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <JsonFileName>/Workflows/TimeLog-GetProjectHours-F6703049-4826-47A4-B826-77F6E5E8D52D.json</JsonFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>6</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>0</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <RunAs>1</RunAs>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <UIFlowType>2</UIFlowType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <Metadata>{"isvalid":true,"schemaVersion":"ROBIN_20211012","containsActiveConnections":false}</Metadata>
+  <Inputs>{"schema":{"properties":{"TimeLogUsername":{"default":"","description":"","format":"password","title":"TimeLog Username","type":"string","value":null},"TimeLogPassword":{"default":"","description":"","format":"password","title":"TimeLog Password","type":"string","value":null},"ProjectCode":{"default":"","description":"","format":null,"title":"ProjectCode","type":"string","value":"10002254"}},"type":"object"}}</Inputs>
+  <Outputs>{"schema":{"properties":{"ProjectHours":{"default":"","description":"","format":null,"title":"Project Hours Logged","type":"string","value":null}},"type":"object"}}</Outputs>
+  <Dependencies>{"childFlows":[]}</Dependencies>
+  <ConnectionReferences>[]</ConnectionReferences>
+  <Definition>"@@ConnectionString: ''\r\n@@Type: 'Local'\r\n@@DesktopType: 'local'\r\n@@DisplayName: 'Local computer'\r\nIMPORT 'controlRepo.appmask' AS appmask\r\nIMPORT 'imageRepo.imgrepo' AS imgrepo\r\n@SENSITIVE: [TimeLogUsername, TimeLogPassword]\r\n@INPUT TimeLogUsername : { 'Description': '', 'FriendlyName': 'TimeLog Username', 'DefaultValue': '', 'Type': 'String' } \r\n@INPUT TimeLogPassword : { 'Description': '', 'FriendlyName': 'TimeLog Password', 'DefaultValue': '', 'Type': 'String' } \r\n@INPUT ProjectCode : { 'Description': '', 'FriendlyName': 'ProjectCode', 'DefaultValue': '10002254', 'Type': 'String' } \r\n@OUTPUT ProjectHours : { 'Description': '', 'FriendlyName': 'Project Hours Logged', 'Type': 'String' } \r\n@@source: 'Recorder'\r\nWebAutomation.LaunchEdge.LaunchEdge Url: 'https://contosotimelog.azurewebsites.net/' BrowserInstance=&gt; Browser\r\nWebAutomation.PopulateTextField.PopulateTextFieldUsePhysicalKeyboard BrowserInstance: Browser Control: appmask['Web Page \\'https://contosotimelog.azurewebsites.net/\\'']['Input text \\'txtUsername\\''] Text: TimeLogUsername Mode: WebAutomation.PopulateTextMode.Replace UnfocusAfterPopulate: False WaitForPageToLoadTimeout: 60\r\nWebAutomation.PopulateTextField.PopulateTextFieldUsePhysicalKeyboard BrowserInstance: Browser Control: appmask['Web Page \\'https://contosotimelog.azurewebsites.net/\\'']['Input password \\'txtPassword\\''] Text: TimeLogPassword Mode: WebAutomation.PopulateTextMode.Replace UnfocusAfterPopulate: False WaitForPageToLoadTimeout: 60\r\n@@source: 'Recorder'\r\nWebAutomation.PressButton.PressButton BrowserInstance: Browser Control: appmask['Web Page \\'https://contosotimelog.azurewebsites.net/\\'']['Input submit \\'Login\\'']\r\n@@source: 'Recorder'\r\nWebAutomation.ExtractData.ExtractHtmlTable BrowserInstance: Browser Control: $'''html &gt; body &gt; div &gt; main &gt; div &gt; table''' ExtractionParameters: { ^['Project Code', 'Project Name', 'Broker', 'Period Start', 'Period End', 'Total Hours'], ['Project Code', 'Project Name', 'Broker', 'Period Start', 'Period End', 'Total Hours'], ['', '', '', '', '', ''] } ExtractedData=&gt; ProjectSummaryTable\r\nLOOP FOREACH CurrentProjectRow IN ProjectSummaryTable\r\n    SET CurrentNumber TO CurrentProjectRow[0]\r\n    IF CurrentProjectRow[0] = ProjectCode THEN\r\n        SET ProjectHours TO CurrentProjectRow[5]\r\n    END\r\nEND\r\nWebAutomation.CloseWebBrowser BrowserInstance: Browser\r\n"</Definition>
+  <SchemaVersion>2022.06</SchemaVersion>
+  <DesktopFlowModules>[]</DesktopFlowModules>
+  <PrimaryEntity>none</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="TimeLog - Get Project Hours" />
+  </LocalizedNames>
+</Workflow>

@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{e4f2504c-bfb9-ee11-9078-000d3aa2e1f5}</formid>
+    <IntroducedVersion>1.0.0.2</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{ac56eea6-014f-453d-ac17-1da6afefd1cf}" IsUserDefined="1" name="New Tab" labelid="{149789f7-e0cd-40e8-9e30-1feac14e4b5e}">
+          <labels>
+            <label description="New Tab" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="true" showbar="false" IsUserDefined="0" id="{69656213-7f46-4032-986f-223c3f96ede0}" name="New Section" columns="11" labelid="{9e1ac924-dd1a-40e5-aaad-e093c04c5bcc}">
+                  <labels>
+                    <label description="Overview" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{a8045fda-859a-474a-b321-9758f826274f}" colspan="1" rowspan="1" labelid="{2750d0d9-97d6-45e7-b6ed-b4766199b75b}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="name" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{3bd992c4-b572-4b13-9485-e4144f2cc660}" labelid="{2e841d05-7ed1-4a02-b817-bbd41653fafa}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{28a4c96e-1de4-4444-873f-f050e44014d4}" locklevel="0" colspan="1" rowspan="1" labelid="{3d52566a-90b6-4f1c-abc7-b9115e9fdd7e}">
+                        <labels>
+                          <label description="Delay until" languagecode="1033" />
+                        </labels>
+                        <control id="delayuntil" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="delayuntil" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{6013e358-1fe8-4b3e-9c0e-163421b3d232}" labelid="{15f68541-52b2-42d2-a9cc-00ce2b35d13c}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{b71c6d25-c8ef-4583-a123-14067bae181e}" locklevel="0" colspan="1" rowspan="1" labelid="{d6182d55-86d1-4471-b028-6e6cd7a6fd66}">
+                        <labels>
+                          <label description="Processing Start Time" languagecode="1033" />
+                        </labels>
+                        <control id="processingstarttime" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="processingstarttime" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{c9db3eea-ed86-4fbe-a140-75c737fe1291}" labelid="{9d3628ec-8ff9-492e-9a5c-9560f9c45271}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{bde1ddc8-a222-4d17-a8dd-99e1dceaa194}" locklevel="0" colspan="1" rowspan="1" labelid="{6c8e2127-e36f-430e-822d-b284b3e50baf}">
+                        <labels>
+                          <label description="Processing Result" languagecode="1033" />
+                        </labels>
+                        <control id="processingresult" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="processingresult" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5ae8ade0-fb5d-48e0-8cc9-e1ad902f3427}" locklevel="0" colspan="1" rowspan="1" labelid="{3a078426-584f-47d0-8ae6-d7963f985f1e}">
+                        <labels>
+                          <label description="Processing User" languagecode="1033" />
+                        </labels>
+                        <control id="processinguser" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="processinguser" disabled="false" />
+                      </cell>
+                      <cell id="{fe529f97-4366-435e-af76-68181d44b137}" locklevel="0" colspan="1" rowspan="1" labelid="{24ca2cba-2e01-4b6b-ac1a-a44d539f77f8}">
+                        <labels>
+                          <label description="Expiry Date" languagecode="1033" />
+                        </labels>
+                        <control id="expirydate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="expirydate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ff547280-fb6c-4d21-a153-3421b763257b}" locklevel="0" colspan="1" rowspan="1" labelid="{e63a93e3-6c3a-4839-8955-83635833dc8f}">
+                        <labels>
+                          <label description="Input" languagecode="1033" />
+                        </labels>
+                        <control id="input" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="input" disabled="false" />
+                      </cell>
+                      <cell id="{33cfb190-ad69-4707-a825-be81e913a493}" locklevel="0" colspan="1" rowspan="1" labelid="{3d3dc12e-5f68-4e3e-bfc8-4f8cbcd2919e}">
+                        <labels>
+                          <label description="Execution Context" languagecode="1033" />
+                        </labels>
+                        <control id="executioncontext" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="executioncontext" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="New Tab_section_3" id="63186dae-e3f8-405f-bf2e-7af68143c487" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115" labelid="{35cf5604-b27d-4f41-b9e4-11d469cd5858}">
+                  <labels>
+                    <label description="Internal" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{df945d27-a6b6-4ef8-9386-39b82f880864}" locklevel="0" colspan="1" rowspan="1" labelid="{04c5041d-d73e-4115-a697-0cc6dcd2df52}">
+                        <labels>
+                          <label description="Processor id" languagecode="1033" />
+                        </labels>
+                        <control id="processorid" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="processorid" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{8e165256-7e26-4df1-a6b0-7ef53081a017}" labelid="{e50ced50-f2ad-4f15-a1aa-c2c76a37d92d}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{48233c40-b256-4020-afc6-65fbadec001e}" locklevel="0" colspan="1" rowspan="1" labelid="{e9a15bc7-c965-4350-bbe3-0c1fc555a556}">
+                        <labels>
+                          <label description="Unique Id By Queue" languagecode="1033" />
+                        </labels>
+                        <control id="uniqueidbyqueue" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="uniqueidbyqueue" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{a85c5099-add9-4c47-b77f-07a1324de3c9}" labelid="{94280fc3-8055-4156-a2af-0f9049347f52}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6c26219b-e039-4da9-9fdf-dbbd5b0a66eb}" locklevel="0" colspan="1" rowspan="1" labelid="{734694c3-8e64-4125-91c6-faad99f0f9af}">
+                        <labels>
+                          <label description="Processor Type" languagecode="1033" />
+                        </labels>
+                        <control id="processortype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="processortype" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{a76e69df-1a7b-46f2-a9b3-45a890aeb804}" labelid="{7385dd75-c17f-4441-8638-a8090b2b5135}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{4e11bd0d-1f40-46fd-b7ef-0986bb48eceb}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{eb7cdfac-1bc8-410c-b3c2-f26efd04c721}" showlabel="false" labelid="{73e7f3f0-5835-4928-8578-6dfb8166fad1}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{2d439d58-6c3d-4293-9a22-e4e1b5bce1c0}" showlabel="false" labelid="{f005c0e7-1b8d-4c0c-8549-7dc0a264d926}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{1c48cdcf-22b2-4e8b-b0c1-0b5683c8df9c}" showlabel="false" labelid="{9c4ed6d0-ffa1-49bb-ae90-00919dd6761a}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{34c49062-e75c-4cad-b7da-e74dbe6b1bd5}" locklevel="0" colspan="1" rowspan="1" labelid="{ff79c3ad-764d-48ce-9018-9a4fd4276fda}">
+              <labels>
+                <label description="Status" languagecode="1033" />
+              </labels>
+              <control id="header_statecode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statecode" disabled="false" />
+            </cell>
+            <cell id="{b32543d2-47b1-4192-8de5-3cec22c1a886}" locklevel="0" colspan="1" rowspan="1" labelid="{a5738b9a-0655-4f89-a1ca-3b45270be02e}">
+              <labels>
+                <label description="Priority" languagecode="1033" />
+              </labels>
+              <control id="header_priority" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="priority" disabled="false" />
+            </cell>
+            <cell id="{e6c8b0cf-bc27-46b1-864f-4c795ac64f01}" locklevel="0" colspan="1" rowspan="1" labelid="{3dd91ff1-c9b7-41d4-8105-c97501fffe58}">
+              <labels>
+                <label description="Requeue Count" languagecode="1033" />
+              </labels>
+              <control id="header_requeuecount" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="requeuecount" disabled="false" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{e617b240-8bd0-4070-b9a7-b86a69418911}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{6bb76112-599a-418f-bb2e-5e0e666b629c}" showlabel="false" labelid="{b38df803-1961-45b8-9180-11de11ca9313}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{97ec3183-f845-4aee-89d3-4b129e5a45ac}" showlabel="false" labelid="{52a10793-9828-42bd-9df3-e6078ca3e34b}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{b3f359b4-eae7-43e4-829a-b9de72fbb2a7}" showlabel="false" labelid="{9f8f9934-d29a-418e-9c6e-b66f174ade7c}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Work Queue Item main form" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

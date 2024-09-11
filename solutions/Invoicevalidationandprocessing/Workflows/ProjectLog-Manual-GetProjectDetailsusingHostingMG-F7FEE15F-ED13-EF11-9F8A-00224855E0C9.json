@@ -1,0 +1,74 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_uiflow_1": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "mss_shareduiflow_b3e73"
+        },
+        "api": {
+          "name": "shared_uiflow"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "d25c202e-8370-45ec-8a21-86730af38b68"
+          },
+          "type": "Request",
+          "kind": "Button",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          }
+        }
+      },
+      "actions": {
+        "Run_a_flow_built_with_Power_Automate_for_desktop": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "9f67527a-05a2-4cf4-a57f-ccbbad02572c"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_uiflow_1",
+              "operationId": "RunUIFlow_V2",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_uiflow"
+            },
+            "parameters": {
+              "uiFlowId": "f6703049-4826-47a4-b826-77f6e5e8d52d",
+              "runMode": "unattended",
+              "item/TimeLogUsername": "a",
+              "item/TimeLogPassword": "a",
+              "item/ProjectCode": "a"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

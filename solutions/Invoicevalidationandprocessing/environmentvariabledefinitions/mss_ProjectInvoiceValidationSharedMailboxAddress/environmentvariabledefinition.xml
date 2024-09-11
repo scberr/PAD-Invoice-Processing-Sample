@@ -1,0 +1,13 @@
+<environmentvariabledefinition schemaname="mss_ProjectInvoiceValidationSharedMailboxAddress">
+  <description default="The email address of the shared mailbox that receives invoices">
+    <label description="The email address of the shared mailbox that receives invoices" languagecode="1033" />
+  </description>
+  <displayname default="Project Invoice Validation - Shared Mailbox Address">
+    <label description="Project Invoice Validation - Shared Mailbox Address" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

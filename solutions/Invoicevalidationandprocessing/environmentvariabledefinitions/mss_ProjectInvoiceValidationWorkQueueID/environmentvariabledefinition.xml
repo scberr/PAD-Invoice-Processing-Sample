@@ -1,0 +1,13 @@
+<environmentvariabledefinition schemaname="mss_ProjectInvoiceValidationWorkQueueID">
+  <description default="The GUID of the Work Queue for processing Project Invoices">
+    <label description="The GUID of the Work Queue for processing Project Invoices" languagecode="1033" />
+  </description>
+  <displayname default="Project Invoice Validation - Work Queue ID">
+    <label description="Project Invoice Validation - Work Queue ID" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>
