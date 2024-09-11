@@ -1,0 +1,108 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "autocoe_DataverseAutoCoESatellitecurrent"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "mss_sharedoffice365_5cd95"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "Project Invoice Validation - Work Queue ID (mss_ProjectInvoiceValidationWorkQueueID)": {
+          "defaultValue": "8395834a-982a-ee11-9965-6045bd1e843b",
+          "type": "String",
+          "metadata": {
+            "schemaName": "mss_ProjectInvoiceValidationWorkQueueID",
+            "description": "The GUID of the Work Queue for processing Project Invoices"
+          }
+        },
+        "Project Invoice Validation - Shared Mailbox Address (mss_ProjectInvoiceValidationSharedMailboxAddress)": {
+          "defaultValue": "accountsmanagement@demopp003.onmicrosoft.com",
+          "type": "String",
+          "metadata": {
+            "schemaName": "mss_ProjectInvoiceValidationSharedMailboxAddress",
+            "description": "The email address of the shared mailbox that receives invoices"
+          }
+        }
+      },
+      "triggers": {
+        "When_an_Invoicing_Email_Arrives_in_Accounts_Shared_Mailbox": {
+          "recurrence": {
+            "interval": 1,
+            "frequency": "Minute"
+          },
+          "splitOn": "@triggerOutputs()?['body/value']",
+          "metadata": {
+            "operationMetadataId": "864d7886-4002-4d2d-b886-41e9769bd61e"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_office365",
+              "operationId": "SharedMailboxOnNewEmailV2",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+            },
+            "parameters": {
+              "mailboxAddress": "@{parameters('Project Invoice Validation - Shared Mailbox Address (mss_ProjectInvoiceValidationSharedMailboxAddress)')};",
+              "folderId": "Inbox",
+              "importance": "Any",
+              "hasAttachments": true,
+              "includeAttachments": true
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Add_an_RPA_Task_to_the_Work_Queue": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "c3f94c90-e9f1-486a-9b22-449f8129e039"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "CreateRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "workqueueitems",
+              "item/name": "Request: @{triggerOutputs()?['body/subject']}",
+              "item/workqueueid@odata.bind": "/workqueues(@{parameters('Project Invoice Validation - Work Queue ID (mss_ProjectInvoiceValidationWorkQueueID)')})",
+              "item/input": "@triggerOutputs()?['body/id']",
+              "item/statuscode": 0
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

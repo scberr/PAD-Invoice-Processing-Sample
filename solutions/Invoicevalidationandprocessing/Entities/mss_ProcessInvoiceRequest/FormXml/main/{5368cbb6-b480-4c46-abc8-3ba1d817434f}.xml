@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{5368cbb6-b480-4c46-abc8-3ba1d817434f}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{37db1f1d-705f-4b72-8502-43f1b9c156bb}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{496a68dd-74b0-4228-8cac-dc2db209a0b9}" columns="11">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{c9d87ba0-287c-4932-a1f4-c8f35ff9501b}">
+                        <labels>
+                          <label description="Reference Number" languagecode="1033" />
+                        </labels>
+                        <control id="mss_referencenumber" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mss_referencenumber" />
+                      </cell>
+                      <cell id="{93ffb555-0c01-4da7-bbaa-12dd09b31fb9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Hours" languagecode="1033" />
+                        </labels>
+                        <control id="mss_hours" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="mss_hours" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{36e884ca-3514-44b2-a461-36cc3e682e4d}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{a0a9abe5-edcf-495b-bbc6-f1c753d78927}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Total Amount" languagecode="1033" />
+                        </labels>
+                        <control id="mss_totalamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="mss_totalamount" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{86b4e6b9-1c6e-4167-bfbd-ef2ea3e54d7a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Project Code" languagecode="1033" />
+                        </labels>
+                        <control id="mss_projectcode" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="mss_projectcode" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{9a1c0d90-1c93-4aac-86f0-4e3b2dd62668}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d1bec76a-b644-4f91-b453-fb87416365ee}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Invoice Document" languagecode="1033" />
+                        </labels>
+                        <control id="mss_invoicedocument" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="mss_invoicedocument" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{e045e08b-8017-4e8a-b78f-2a26264e0894}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_3" id="7c6f1653-dc43-44f1-8d44-255313314237" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Approval" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{36a44d1d-267a-45b3-852f-f68d0cc269ad}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Approver" languagecode="1033" />
+                        </labels>
+                        <control id="mss_approver" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="mss_approver" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8d327c2e-209c-4c12-a4a0-1befb70ee5ea}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Approval Status" languagecode="1033" />
+                        </labels>
+                        <control id="mss_approvalstatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="mss_approvalstatus" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fc2fb311-70a7-42e9-9988-12c0ccd2ffca}" locklevel="0" colspan="1" rowspan="4">
+                        <labels>
+                          <label description="Approval Comments" languagecode="1033" />
+                        </labels>
+                        <control id="mss_approvalcomments" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="mss_approvalcomments" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{8dbf2805-ad6b-459b-b4ea-ae40c13bd67c}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{00f1f595-06a4-4d32-9390-ebc8c2c513c2}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{836869b9-cbf4-4cec-b6ea-75c26db28579}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{e515bd07-17dd-4406-ac0c-0dcb1f49f5d0}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{3b384f8e-3a26-4381-bce5-66afcfee5a06}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{bb98869e-028a-4a26-8934-754cab5829e6}" colspan="1" rowspan="1">
+              <labels>
+                <label description="Owner" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+            </cell>
+            <cell id="{62e48043-ea09-4a3c-ad14-8a9689dd9391}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="Approval Status" languagecode="1033" />
+              </labels>
+              <control id="header_mss_approvalstatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="mss_approvalstatus" disabled="false" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{80ffdb91-c7bb-41e6-bd29-5d181ca8c4ac}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{d8b20d11-5a98-4f6e-87d3-2c93141bed9e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{50771f32-7913-47e6-ab96-7100d437d8c1}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{9a5a4a26-074a-48c0-a25b-5236351812bf}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

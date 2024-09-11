@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{eb4e486d-844b-419f-9020-77dfb5fb9942}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="mss_referencenumber" select="1" icon="1" preview="1">
+        <row name="result" id="mss_processinvoicerequestid">
+          <cell name="mss_referencenumber" width="300" />
+          <cell name="mss_projectcode" width="100" />
+          <cell name="mss_hours" width="100" />
+          <cell name="mss_totalamount" width="100" />
+          <cell name="mss_approvalstatus" width="100" />
+          <cell name="mss_approver" width="100" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="mss_processinvoicerequest">
+          <attribute name="mss_processinvoicerequestid" />
+          <attribute name="mss_referencenumber" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="mss_approvalstatus" />
+          <attribute name="mss_approver" />
+          <attribute name="mss_hours" />
+          <attribute name="mss_totalamount" />
+          <attribute name="mss_projectcode" />
+          <order attribute="createdon" descending="true" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Process Invoice Requests" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

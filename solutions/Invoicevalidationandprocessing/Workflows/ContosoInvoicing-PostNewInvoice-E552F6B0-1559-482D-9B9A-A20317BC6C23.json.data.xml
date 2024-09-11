@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{e552f6b0-1559-482d-9b9a-a20317bc6c23}" Name="Contoso Invoicing - Post New Invoice" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <JsonFileName>/Workflows/ContosoInvoicing-PostNewInvoice-E552F6B0-1559-482D-9B9A-A20317BC6C23.json</JsonFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>6</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>0</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <RunAs>1</RunAs>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <UIFlowType>2</UIFlowType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <Metadata>{"isvalid":true,"schemaVersion":"ROBIN_20211012","containsActiveConnections":false}</Metadata>
+  <Inputs>{"schema":{"properties":{"AccountName":{"default":"","description":"","format":null,"title":"AccountName","type":"string","value":"Sample Account Name"},"ContactName":{"default":"","description":"","format":null,"title":"Contact Name","type":"string","value":"Sample Contact Name"},"Amount":{"default":"","description":"","format":null,"title":"Amount","type":"string","value":"555.55"}},"type":"object"}}</Inputs>
+  <Outputs>{"schema":{"properties":{"CreatedInternalInvoiceNumber":{"default":"","description":"","format":null,"title":"Created Internal Invoice Number","type":"string","value":null}},"type":"object"}}</Outputs>
+  <Dependencies>{"childFlows":[]}</Dependencies>
+  <ConnectionReferences>[]</ConnectionReferences>
+  <Definition>"@@ConnectionString: ''\r\n@@Type: 'Local'\r\n@@DesktopType: 'local'\r\n@@DisplayName: 'Local computer'\r\nIMPORT 'controlRepo.appmask' AS appmask\r\nIMPORT 'imageRepo.imgrepo' AS imgrepo\r\n@SENSITIVE: []\r\n@INPUT AccountName : { 'Description': '', 'FriendlyName': 'AccountName', 'DefaultValue': 'Sample Account Name', 'Type': 'String' } \r\n@INPUT ContactName : { 'Description': '', 'FriendlyName': 'Contact Name', 'DefaultValue': 'Sample Contact Name', 'Type': 'String' } \r\n@INPUT Amount : { 'Description': '', 'FriendlyName': 'Amount', 'DefaultValue': '555.55', 'Type': 'String' } \r\n@OUTPUT CreatedInternalInvoiceNumber : { 'Description': '', 'FriendlyName': 'Created Internal Invoice Number', 'Type': 'String' } \r\nBLOCK ErrorHander\r\nON BLOCK ERROR\r\nCALL ErrorHandler\r\nTHROW ERROR\r\nEND\r\n    System.RunApplication.RunApplication ApplicationPath: $'''C:\\\\Program Files (x86)\\\\Contoso, Inc\\\\Contoso Invoicing\\\\LegacyInvoicingApp.exe''' WorkingDirectory: $'''C:\\\\Program Files (x86)\\\\Contoso, Inc\\\\Contoso Invoicing''' WindowStyle: System.ProcessWindowStyle.Normal ProcessId=&gt; AppProcessId\r\n    @@source: 'Recorder'\r\n    UIAutomation.Click Element: appmask['Window \\'Contoso Invoicing\\'']['Text \\'Invoices\\''] ClickType: UIAutomation.ClickType.LeftClick OffsetX: 15 OffsetY: 2 MousePositionRelativeToElement: UIAutomation.RectangleEdgePoint.MiddleLeft\r\n    @@source: 'Recorder'\r\n    UIAutomation.Click Element: appmask['Window \\'Contoso Invoicing\\'']['Image \\'Image\\''] ClickType: UIAutomation.ClickType.LeftClick OffsetX: -2 OffsetY: -2 MousePositionRelativeToElement: UIAutomation.RectangleEdgePoint.MiddleRight\r\n    UIAutomation.PopulateTextField TextField: appmask['Window \\'Contoso Invoicing\\'']['Edit \\'TextBox\\' 2'] Text: AccountName Mode: UIAutomation.PopulateTextMode.Replace ClickType: UIAutomation.PopulateMouseClickType.SingleClick\r\n    UIAutomation.PopulateTextField TextField: appmask['Window \\'Contoso Invoicing\\'']['Edit \\'TextBox\\' 3'] Text: ContactName Mode: UIAutomation.PopulateTextMode.Replace ClickType: UIAutomation.PopulateMouseClickType.SingleClick\r\n    UIAutomation.PopulateTextField TextField: appmask['Window \\'Contoso Invoicing\\'']['Edit \\'TextBox\\' 4'] Text: Amount Mode: UIAutomation.PopulateTextMode.Replace ClickType: UIAutomation.PopulateMouseClickType.SingleClick\r\n    @@source: 'Recorder'\r\n    UIAutomation.Click Element: appmask['Window \\'Contoso Invoicing\\'']['Image \\'Image\\' 2'] ClickType: UIAutomation.ClickType.LeftClick OffsetX: 4 OffsetY: 1 MousePositionRelativeToElement: UIAutomation.RectangleEdgePoint.MiddleLeft\r\n    UIAutomation.GetElementDetails Element: appmask['Window \\'Contoso Invoicing\\'']['Text \\'1039\\''] AttributeName: $'''name''' AttributeValue=&gt; CreatedInternalInvoiceNumber\r\n    UIAutomation.CloseWindow.Close Window: appmask['Window \\'Contoso Invoicing\\'']\r\nEND\r\nFUNCTION ErrorHandler GLOBAL\r\n    ERROR =&gt; LastError\r\n    /# dOH\r\n#/\r\n    Workstation.PlaySound.PlaySystemSound SystemSound: System.SystemSound.Asterisk\r\nEND FUNCTION\r\n"</Definition>
+  <SchemaVersion>2022.06</SchemaVersion>
+  <PrimaryEntity>none</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Contoso Invoicing - Post New Invoice" />
+  </LocalizedNames>
+</Workflow>

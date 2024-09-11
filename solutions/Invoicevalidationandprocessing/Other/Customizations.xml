@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Entities />
+  <Roles />
+  <Workflows />
+  <FieldSecurityProfiles />
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <WebResources />
+  <CustomControls />
+  <AppModuleSiteMaps />
+  <AppModules />
+  <EntityDataProviders />
+  <CanvasApps />
+  <AIModels>
+    <AIModel>
+      <msdyn_aimodelid>{5f629454-7788-4677-9ddc-c1e62c44c6ad}</msdyn_aimodelid>
+      <msdyn_name>Litware Invoice Model</msdyn_name>
+      <msdyn_templateid>{10707e4e-1d56-e911-8194-000d3a6cd5a5}</msdyn_templateid>
+      <statecode>1</statecode>
+      <statuscode>1</statuscode>
+      <IsCustomizable>1</IsCustomizable>
+      <msdyn_activerunconfigurationid>{89344400-c780-ed11-81ad-000d3a1e0628}</msdyn_activerunconfigurationid>
+      <AIConfigurations>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{89344400-c780-ed11-81ad-000d3a1e0628}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"DocumentScanning-2","labels":{"Project Code":{"defaultId":"3075ad9b-d16d-4a3e-859d-f08e52695711","fieldType":"string","layoutSpecificIds":{}},"Internal Contact Email":{"defaultId":"4155d4dc-43fd-4c9c-9568-44ab03d4ba68","fieldType":"string","layoutSpecificIds":{}},"Total Amount":{"defaultId":"bc4a0131-e6e1-439e-9cc2-60feac9ec608","fieldType":"string","layoutSpecificIds":{}},"Period Start":{"defaultId":"43fcebe7-5698-4620-b013-b6eb03f082e1","fieldType":"string","layoutSpecificIds":{}},"Period End":{"defaultId":"7aff9bb4-972a-4d50-8397-7c04d5ef8a68","fieldType":"string","layoutSpecificIds":{}},"Total Hours":{"defaultId":"68616125-3b87-4bf7-8b04-dbdf054475ce","fieldType":"string","layoutSpecificIds":{}}},"tables":{},"layouts":{"Litware Training Invoices":{"layoutId":"445d9847-366d-4583-a76a-a4eabc3bfe35"}}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_name>5f629454-7788-4677-9ddc-c1e62c44c6ad_2022-12-21T00:32:51.740Z</msdyn_name>
+          <msdyn_modelrundataspecification>H4sIAAAAAAAACu1Wy27bMBD8FYKnFlATBH0cdEtjFQ1QxEYc9E5JK4EBXyCXRY0g/96lZFd1JLeRe5UPssTlDIezK2qf+NZB9cV6LfA7+CCt4flVxm+Ni3hvLRYGJe54/sRXMjgldndCA885z/g1opdlRAgpXIoAnz4UprI11OP5K1tFDQYJ97BzaeRWixb4c8a11NCPnQIxTOHsEF1BqLx02InlMvFcPjpos9GtM20mnFOyEmn2paubfQRlc7gttRtUbWlPpk2yHMXCWNOmGz6hhdwCzxKSeWHo+qb4mbMrZj17/+7j2wu2NmrHPGD0JtB/iAoDsw0TLNCyClhDqbgg+nVHKRTP0Uf4Le9z5/JB5DPJXEecmyolSlATWxtcWJePUKVcvZpz422CsBtKf3p+LdER7iXpD6Hin2xDciprGlmDqSaqZoixUFmfaPf4eyBDCd1IUPV0ydUCxaHcRqt2er7Zvpjm7HK0s1Qid1GX4MeTu1X6IjL9lOGdofpqaYAyn37pPaWCozIh/wwK8rHQQqo50k4wLKmYm4oHi+TitbaRTrkZCTjCLbbPtX0DXtqabVH4WbYf4Rbbz7S9MPUZpifUYvl5B8xXG32Yf770sMX0eaZ3vqMo1VQn+B/tUsdLYRuxn/EScGOVIkpqM5hJIxPNSA+nr/a+2dl2vc7fmP7VGJGqX49uYfIQDAAA</msdyn_modelrundataspecification>
+          <msdyn_type>190690001</msdyn_type>
+          <msdyn_aimodelid>{5f629454-7788-4677-9ddc-c1e62c44c6ad}</msdyn_aimodelid>
+          <msdyn_trainedmodelaiconfigurationpareid>{72ece589-c580-ed11-81ad-000d3a1e0628}</msdyn_trainedmodelaiconfigurationpareid>
+          <statecode>2</statecode>
+          <statuscode>7</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{72ece589-c580-ed11-81ad-000d3a1e0628}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"DocumentScanning-1","shouldReturnTableFromUnsupervisedModel":false,"defaultLayoutId":"445d9847-366d-4583-a76a-a4eabc3bfe35","displayNameMapping":{}}</msdyn_customconfiguration>
+          <msdyn_databinding>{"schemaVersion":2,"input":{"schemaName":"msdyn_aibdatasetfile","queries":{"train":{"type":"fetchXml","query":"&lt;fetch mapping=\"logical\"&gt;\n    &lt;entity name=\"msdyn_aibdatasetfile\"&gt;\n      &lt;filter type=\"and\"&gt;\n  &lt;condition attribute=\"msdyn_aibdatasetid\" operator=\"eq\" value=\"2bb715b3-99e4-4cf5-b612-24a1ef97bbba\"/&gt;\n&lt;/filter&gt;\n    &lt;/entity&gt;\n  &lt;/fetch&gt;"}},"relatedEntities":[{"schemaName":"msdyn_AIBDatasetFile_msdyn_AIBuilde","cardinality":"ManyToOne","attributes":[{"specificationName":"binaryName","schemaName":"msdyn_file","dataType":"Undefined","requiredLevel":"ApplicationRequired"}]},{"schemaName":"msdyn_AIBFileAttachedData_msdyn_AIB","specificationName":"labels","cardinality":"OneToMany","queries":{"train":{"type":"fetchXml","query":"&lt;fetch mapping=\"logical\"&gt;\n    &lt;entity name=\"msdyn_aibfileattacheddata\"&gt;\n      &lt;filter type=\"and\"&gt;\n  &lt;condition attribute=\"msdyn_type\" operator=\"eq\" value=\"tag\"/&gt;\n&lt;/filter&gt;\n    &lt;/entity&gt;\n  &lt;/fetch&gt;"}},"embeddedObjects":[{"schemaName":"msdyn_data","isCollection":false,"embeddedObjects":[{"schemaName":"trainingLabel","specificationName":"labels","isCollection":false}]}]}]}}</msdyn_databinding>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_modeldata>67cc4a22-a400-42dc-bd80-0685a803485d</msdyn_modeldata>
+          <msdyn_modelperformance>{"metrics":[{"isGlobalScore":true,"name":"AverageAccuracyOfLayouts","value":0.9950000047683716,"type":"Percentage"},{"isGlobalScore":false,"name":"LabelAverageAccuracyOverLayouts/3075ad9b-d16d-4a3e-859d-f08e52695711","value":0.9950000047683716,"type":"Percentage"},{"isGlobalScore":false,"name":"LabelAverageAccuracyOverLayouts/4155d4dc-43fd-4c9c-9568-44ab03d4ba68","value":0.9950000047683716,"type":"Percentage"},{"isGlobalScore":false,"name":"LabelAverageAccuracyOverLayouts/43fcebe7-5698-4620-b013-b6eb03f082e1","value":0.9950000047683716,"type":"Percentage"},{"isGlobalScore":false,"name":"LabelAverageAccuracyOverLayouts/68616125-3b87-4bf7-8b04-dbdf054475ce","value":0.9950000047683716,"type":"Percentage"},{"isGlobalScore":false,"name":"LabelAverageAccuracyOverLayouts/7aff9bb4-972a-4d50-8397-7c04d5ef8a68","value":0.9950000047683716,"type":"Percentage"},{"isGlobalScore":false,"name":"LabelAverageAccuracyOverLayouts/bc4a0131-e6e1-439e-9cc2-60feac9ec608","value":0.9950000047683716,"type":"Percentage"}],"details":[{"id":"445d9847-366d-4583-a76a-a4eabc3bfe35","category":"layout","metrics":[{"name":"accuracy","value":0.9950000047683716,"type":"Percentage"}]},{"id":"445d9847-366d-4583-a76a-a4eabc3bfe35/3075ad9b-d16d-4a3e-859d-f08e52695711","category":"layout/label","metrics":[{"name":"accuracy","value":0.9950000047683716,"type":"Percentage"}]},{"id":"445d9847-366d-4583-a76a-a4eabc3bfe35/4155d4dc-43fd-4c9c-9568-44ab03d4ba68","category":"layout/label","metrics":[{"name":"accuracy","value":0.9950000047683716,"type":"Percentage"}]},{"id":"445d9847-366d-4583-a76a-a4eabc3bfe35/43fcebe7-5698-4620-b013-b6eb03f082e1","category":"layout/label","metrics":[{"name":"accuracy","value":0.9950000047683716,"type":"Percentage"}]},{"id":"445d9847-366d-4583-a76a-a4eabc3bfe35/68616125-3b87-4bf7-8b04-dbdf054475ce","category":"layout/label","metrics":[{"name":"accuracy","value":0.9950000047683716,"type":"Percentage"}]},{"id":"445d9847-366d-4583-a76a-a4eabc3bfe35/7aff9bb4-972a-4d50-8397-7c04d5ef8a68","category":"layout/label","metrics":[{"name":"accuracy","value":0.9950000047683716,"type":"Percentage"}]},{"id":"445d9847-366d-4583-a76a-a4eabc3bfe35/bc4a0131-e6e1-439e-9cc2-60feac9ec608","category":"layout/label","metrics":[{"name":"accuracy","value":0.9950000047683716,"type":"Percentage"}]}]}</msdyn_modelperformance>
+          <msdyn_name>5f629454-7788-4677-9ddc-c1e62c44c6ad_2022-12-21T00:22:22.180Z</msdyn_name>
+          <msdyn_modelrundataspecification>{
+  "SpecFormatVersion": 1,
+  "InputRootEntity": {
+    "DisplayName": "Document",
+    "Attributes": {
+      "binaryName": { "Type": "Image" }
+    }
+  }
+}</msdyn_modelrundataspecification>
+          <msdyn_type>190690000</msdyn_type>
+          <msdyn_aimodelid>{5f629454-7788-4677-9ddc-c1e62c44c6ad}</msdyn_aimodelid>
+          <msdyn_lasttrainorrundate>2022-12-21T00:33:35</msdyn_lasttrainorrundate>
+          <statecode>2</statecode>
+          <statuscode>6</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+          <msdyn_modelprovisioningmetadata>AQAAAJkAAADvu797Ikdlb2dyYXBoeSI6InVzIiwiQ2x1c3RlcklkIjoiZXVzIiwiS2V5VmVyc2lvbiI6IjBmZDc1MWMxZTA5YjRhYTk5ODAyNzQzNWU0YmY5ZTFkIiwiU2lnbmF0dXJlVmVyc2lvbiI6InYxIiwiU2lnbmF0dXJlRGF0ZUJpbmFyeSI6NTI1MDMwMjI5NjAzOTk1Nzk3Mn0gAAAAhymWGxqGJHn+FCPWQ53Ht7voyJ2E4pjLQIU+XGGafFk2AgAAeyJ2ZXJzaW9uIjoiRG9jdW1lbnRTY2FubmluZ0NvcHlEYXRhLTEiLCJtb2RlbERhdGEiOnsiaW50ZXJuYWxTdXBlcnZpc2VkTW9kZWxJZCI6Ijk1M2U2MmExLTIxYzItNGEwMC1iYmE2LWRjM2EyODM3NWNmMiIsImNvZ25pdGl2ZVN1cGVydmlzZWRSZXNvdXJjZUlkIjoiRm9ybVVuZGVyc3RhbmRpbmdBcHBsaWNhdGlvbktleS0yIiwiYmFja2VuZFZlcnNpb24iOiJ2MyIsImJhY2tlbmRNaW5vclZlcnNpb24iOiIiLCJrZXlBbGxvY2F0b3JWZXJzaW9uIjoidjIuMCIsIm1vZGVsTGF5b3V0c0NvbmZpZyI6eyJzdWJtb2RlbHMiOltdLCJkZWZhdWx0TGF5b3V0SWQiOiI0NDVkOTg0Ny0zNjZkLTQ1ODMtYTc2YS1hNGVhYmMzYmZlMzUifSwiRmVhdHVyZXMiOnsiY3VzdG9taXplZFByZWJ1aWx0Ijp7InByZWJ1aWx0RXhjbHVkZWRGaWVsZHMiOnt9fX0sInNvdXJjZUlzbGFuZElkIjoiMTA0IiwiZ2VvIjoidXMiLCJlbnZpcm9ubWVudElkIjoiYmY0NThjN2UtN2E2NS1lZjExLWE2NmQtMDAwZDNhMTA2ZjNmIiwiY2FwaU1vZGVsSWQiOiI2N2NjNGEyMi1hNDAwLTQyZGMtYmQ4MC0wNjg1YTgwMzQ4NWQifX0=</msdyn_modelprovisioningmetadata>
+        </AIConfiguration>
+      </AIConfigurations>
+    </AIModel>
+  </AIModels>
+  <connectionreferences>
+    <connectionreference connectionreferencelogicalname="autocoe_DataverseAutoCoESatellitecurrent">
+      <connectionreferencedisplayname>Dataverse - Auto CoE Satellite (current)</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="mss_sharedapprovals_a3cae">
+      <connectionreferencedisplayname>Approvals Invoicevalidationandprocessing-a3cae</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_approvals</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="mss_sharedcommondataserviceforapps_31651">
+      <connectionreferencedisplayname>Microsoft Dataverse-31651</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="mss_sharedkeyvault_b7cd9">
+      <connectionreferencedisplayname>Azure Key Vault Invoicevalidationandprocessing-b7cd9</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_keyvault</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="mss_sharedkeyvault_eb4b1">
+      <connectionreferencedisplayname>Azure Key Vault Invoicevalidationandprocessing-eb4b1</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_keyvault</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="mss_sharedoffice365_4857f">
+      <connectionreferencedisplayname>Office 365 Outlook Invoicevalidationandprocessing-4857f</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_office365</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="mss_sharedoffice365_5cd95">
+      <connectionreferencedisplayname>Office 365 Outlook Invoicevalidationandprocessing-5cd95</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_office365</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="mss_shareduiflow_b3e73">
+      <connectionreferencedisplayname>Desktop flows Invoicevalidationandprocessing-b3e73</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_uiflow</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="mss_shareduiflow_d128b">
+      <connectionreferencedisplayname>Desktop flows Invoicevalidationandprocessing-d128b</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_uiflow</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="new_sharedapprovals_1ec42">
+      <connectionreferencedisplayname>Approvals Default-1ec42</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_approvals</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="new_shareduiflow_764cd">
+      <connectionreferencedisplayname>Desktop flows Default-764cd</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_uiflow</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="new_shareduiflow_e32b1">
+      <connectionreferencedisplayname>Desktop flows Default-e32b1</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_uiflow</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+  </connectionreferences>
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>

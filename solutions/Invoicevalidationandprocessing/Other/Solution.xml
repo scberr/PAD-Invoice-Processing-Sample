@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.24074.218" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>Invoicevalidationandprocessing</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Invoice Validation and Processing" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.0.0.3</Version>
+    <Managed>0</Managed>
+    <Publisher>
+      <UniqueName>microsoftsamples</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Microsoft Samples" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions>
+        <Description description="microsoftsamples" languagecode="1033" />
+      </Descriptions>
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>mss</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>86653</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="mss_processinvoicerequest" behavior="0" />
+      <RootComponent type="1" schemaName="systemuser" behavior="1" />
+      <RootComponent type="1" schemaName="workqueueitem" behavior="1" />
+      <RootComponent type="20" id="{cb3f66f7-ef1b-ef11-840a-000d3ac6ff83}" behavior="0" />
+      <RootComponent type="29" id="{119a619d-f75d-4a8a-a3ff-a224142180f7}" behavior="0" />
+      <RootComponent type="29" id="{36eeccf3-9b2b-ee11-9965-000d3aa22ffd}" behavior="0" />
+      <RootComponent type="29" id="{dae41b19-9c2a-ee11-9965-000d3aa22ffd}" behavior="0" />
+      <RootComponent type="29" id="{e552f6b0-1559-482d-9b9a-a20317bc6c23}" behavior="0" />
+      <RootComponent type="29" id="{f6703049-4826-47a4-b826-77f6e5e8d52d}" behavior="0" />
+      <RootComponent type="29" id="{f7fee15f-ed13-ef11-9f8a-00224855e0c9}" behavior="0" />
+      <RootComponent type="300" schemaName="mss_invoicevalidationandprocessselfservice_31bbf" behavior="0" />
+      <RootComponent type="401" id="{5f629454-7788-4677-9ddc-c1e62c44c6ad}" behavior="0" />
+      <RootComponent type="61" schemaName="mss_invoice.svg" behavior="0" />
+      <RootComponent type="62" schemaName="mss_InvoiceAdministration" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="workqueue" displayName="Work Queue" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="300" schemaName="mss_invoicevalidationandprocessselfservice_31bbf" displayName="Invoice Validation and Process - Self Service" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="workqueueitem" displayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="1" schemaName="workqueueitem" displayName="Work Queue Item" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="workqueueitem" displayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="29" displayName="Accounts Mailbox - Email Received - Add to Process Invoice Work Queue_AP-000001000_001" id="{36eeccf3-9b2b-ee11-9965-000d3aa22ffd}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="workqueueitem" displayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="29" displayName="Work Queue - Project Invoice Validation Item Queued - Process Item_AP-000001000_001" id="{dae41b19-9c2a-ee11-9965-000d3aa22ffd}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="workqueueitem" displayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="300" schemaName="mss_invoicevalidationandprocessselfservice_31bbf" displayName="Invoice Validation and Process - Self Service" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="workqueueitem" displayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="60" displayName="Work Queue Item main form" parentDisplayName="Work Queue Item" id="{e4f2504c-bfb9-ee11-9078-000d3aa2e1f5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="workqueueitem" displayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="62" schemaName="mss_InvoiceAdministration" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="createdon" displayName="Created On" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="26" schemaName="Active Work Queue Items" displayName="Active Work Queue Items" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" id="{0d42c2e0-e325-479f-a508-0f14a8445d53}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="delayuntil" displayName="Delay until" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="60" displayName="Work Queue Item main form" parentDisplayName="Work Queue Item" id="{e4f2504c-bfb9-ee11-9078-000d3aa2e1f5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="executioncontext" displayName="Execution Context" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="60" displayName="Work Queue Item main form" parentDisplayName="Work Queue Item" id="{e4f2504c-bfb9-ee11-9078-000d3aa2e1f5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="expirydate" displayName="Expiry Date" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="60" displayName="Work Queue Item main form" parentDisplayName="Work Queue Item" id="{e4f2504c-bfb9-ee11-9078-000d3aa2e1f5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="input" displayName="Input" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="60" displayName="Work Queue Item main form" parentDisplayName="Work Queue Item" id="{e4f2504c-bfb9-ee11-9078-000d3aa2e1f5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="name" displayName="Name" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="26" schemaName="Active Work Queue Items" displayName="Active Work Queue Items" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" id="{0d42c2e0-e325-479f-a508-0f14a8445d53}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="name" displayName="Name" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="60" displayName="Work Queue Item main form" parentDisplayName="Work Queue Item" id="{e4f2504c-bfb9-ee11-9078-000d3aa2e1f5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="priority" displayName="Priority" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="60" displayName="Work Queue Item main form" parentDisplayName="Work Queue Item" id="{e4f2504c-bfb9-ee11-9078-000d3aa2e1f5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="processingresult" displayName="Processing Result" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="60" displayName="Work Queue Item main form" parentDisplayName="Work Queue Item" id="{e4f2504c-bfb9-ee11-9078-000d3aa2e1f5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="processingstarttime" displayName="Processing Start Time" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="60" displayName="Work Queue Item main form" parentDisplayName="Work Queue Item" id="{e4f2504c-bfb9-ee11-9078-000d3aa2e1f5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="processinguser" displayName="Processing User" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="60" displayName="Work Queue Item main form" parentDisplayName="Work Queue Item" id="{e4f2504c-bfb9-ee11-9078-000d3aa2e1f5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="processorid" displayName="Processor id" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="60" displayName="Work Queue Item main form" parentDisplayName="Work Queue Item" id="{e4f2504c-bfb9-ee11-9078-000d3aa2e1f5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="processortype" displayName="Processor Type" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="60" displayName="Work Queue Item main form" parentDisplayName="Work Queue Item" id="{e4f2504c-bfb9-ee11-9078-000d3aa2e1f5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="requeuecount" displayName="Requeue Count" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="60" displayName="Work Queue Item main form" parentDisplayName="Work Queue Item" id="{e4f2504c-bfb9-ee11-9078-000d3aa2e1f5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="statecode" displayName="Status" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="26" schemaName="Active Work Queue Items" displayName="Active Work Queue Items" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" id="{0d42c2e0-e325-479f-a508-0f14a8445d53}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="statecode" displayName="Status" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="29" displayName="Work Queue - Project Invoice Validation Item Queued - Process Item_AP-000001000_001" id="{dae41b19-9c2a-ee11-9965-000d3aa22ffd}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="statecode" displayName="Status" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="60" displayName="Work Queue Item main form" parentDisplayName="Work Queue Item" id="{e4f2504c-bfb9-ee11-9078-000d3aa2e1f5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="uniqueidbyqueue" displayName="Unique Id By Queue" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="60" displayName="Work Queue Item main form" parentDisplayName="Work Queue Item" id="{e4f2504c-bfb9-ee11-9078-000d3aa2e1f5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="workqueueitemid" displayName="Work Queue Item" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="26" schemaName="Active Work Queue Items" displayName="Active Work Queue Items" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" id="{0d42c2e0-e325-479f-a508-0f14a8445d53}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Active Work Queue Items" displayName="Active Work Queue Items" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" solution="MicrosoftFlowExtensionsCore (1.8.19.1)" id="{0d42c2e0-e325-479f-a508-0f14a8445d53}">
+          <package>MicrosoftFlowExtensionsAnchor (1.8.19.1)</package>
+        </Required>
+        <Dependent type="26" schemaName="Active Work Queue Items" displayName="Active Work Queue Items" parentSchemaName="workqueueitem" parentDisplayName="Work Queue Item" id="{0d42c2e0-e325-479f-a508-0f14a8445d53}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="autocoe_DataverseAutoCoESatellitecurrent" solution="AutomationCoESatellite (1.0.20230908.4)" id.connectionreferencelogicalname="autocoe_DataverseAutoCoESatellitecurrent" />
+        <Dependent type="connectionreference" displayName="autocoe_DataverseAutoCoESatellitecurrent" id.connectionreferencelogicalname="autocoe_DataverseAutoCoESatellitecurrent" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

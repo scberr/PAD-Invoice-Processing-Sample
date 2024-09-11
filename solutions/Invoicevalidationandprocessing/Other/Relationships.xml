@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="business_unit_mss_processinvoicerequest" />
+  <EntityRelationship Name="FileAttachment_mss_ProcessInvoiceRequest_mss_InvoiceDocument" />
+  <EntityRelationship Name="lk_mss_processinvoicerequest_createdby" />
+  <EntityRelationship Name="lk_mss_processinvoicerequest_modifiedby" />
+  <EntityRelationship Name="mss_ProcessInvoiceRequest_Approver_System" />
+  <EntityRelationship Name="owner_mss_processinvoicerequest" />
+  <EntityRelationship Name="team_mss_processinvoicerequest" />
+  <EntityRelationship Name="TransactionCurrency_mss_ProcessInvoiceRequest" />
+  <EntityRelationship Name="user_mss_processinvoicerequest" />
+</EntityRelationships>
