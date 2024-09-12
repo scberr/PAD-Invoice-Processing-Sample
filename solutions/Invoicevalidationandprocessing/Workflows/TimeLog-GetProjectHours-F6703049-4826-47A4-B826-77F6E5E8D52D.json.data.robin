@@ -1,0 +1,27 @@
+"@@ConnectionString: ''
+@@Type: 'Local'
+@@DesktopType: 'local'
+@@DisplayName: 'Local computer'
+IMPORT 'controlRepo.appmask' AS appmask
+IMPORT 'imageRepo.imgrepo' AS imgrepo
+@SENSITIVE: [TimeLogUsername, TimeLogPassword]
+@INPUT TimeLogUsername : { 'Description': '', 'FriendlyName': 'TimeLog Username', 'DefaultValue': '', 'Type': 'String' } 
+@INPUT TimeLogPassword : { 'Description': '', 'FriendlyName': 'TimeLog Password', 'DefaultValue': '', 'Type': 'String' } 
+@INPUT ProjectCode : { 'Description': '', 'FriendlyName': 'ProjectCode', 'DefaultValue': '10002254', 'Type': 'String' } 
+@OUTPUT ProjectHours : { 'Description': '', 'FriendlyName': 'Project Hours Logged', 'Type': 'String' } 
+@@source: 'Recorder'
+WebAutomation.LaunchEdge.LaunchEdge Url: 'https://contosotimelog.azurewebsites.net/' BrowserInstance=> Browser
+WebAutomation.PopulateTextField.PopulateTextFieldUsePhysicalKeyboard BrowserInstance: Browser Control: appmask['Web Page \\'https://contosotimelog.azurewebsites.net/\\'']['Input text \\'txtUsername\\''] Text: TimeLogUsername Mode: WebAutomation.PopulateTextMode.Replace UnfocusAfterPopulate: False WaitForPageToLoadTimeout: 60
+WebAutomation.PopulateTextField.PopulateTextFieldUsePhysicalKeyboard BrowserInstance: Browser Control: appmask['Web Page \\'https://contosotimelog.azurewebsites.net/\\'']['Input password \\'txtPassword\\''] Text: TimeLogPassword Mode: WebAutomation.PopulateTextMode.Replace UnfocusAfterPopulate: False WaitForPageToLoadTimeout: 60
+@@source: 'Recorder'
+WebAutomation.PressButton.PressButton BrowserInstance: Browser Control: appmask['Web Page \\'https://contosotimelog.azurewebsites.net/\\'']['Input submit \\'Login\\'']
+@@source: 'Recorder'
+WebAutomation.ExtractData.ExtractHtmlTable BrowserInstance: Browser Control: $'''html > body > div > main > div > table''' ExtractionParameters: { ^['Project Code', 'Project Name', 'Broker', 'Period Start', 'Period End', 'Total Hours'], ['Project Code', 'Project Name', 'Broker', 'Period Start', 'Period End', 'Total Hours'], ['', '', '', '', '', ''] } ExtractedData=> ProjectSummaryTable
+LOOP FOREACH CurrentProjectRow IN ProjectSummaryTable
+    SET CurrentNumber TO CurrentProjectRow[0]
+    IF CurrentProjectRow[0] = ProjectCode THEN
+        SET ProjectHours TO CurrentProjectRow[5]
+    END
+END
+WebAutomation.CloseWebBrowser BrowserInstance: Browser
+"

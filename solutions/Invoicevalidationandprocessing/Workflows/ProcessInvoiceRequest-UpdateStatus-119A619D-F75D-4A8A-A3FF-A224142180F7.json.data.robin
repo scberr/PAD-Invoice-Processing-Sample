@@ -1,0 +1,32 @@
+"@@ConnectionString: ''
+@@Type: 'Local'
+@@DesktopType: 'local'
+@@DisplayName: 'Local computer'
+IMPORT 'controlRepo.appmask' AS appmask
+IMPORT 'imageRepo.imgrepo' AS imgrepo
+@SENSITIVE: [dataverse_username, dataverse_password, AuthenticationResponseJson, dataverse_token, dataverse_client_id, dataverse_secret]
+@INPUT dataverse_username : { 'Description': '', 'FriendlyName': 'dataverse_username', 'Type': 'String', 'IsOptional': False, 'DefaultValue': 'demo.presenter@DemoPP003.onmicrosoft.com' } 
+@INPUT dataverse_password : { 'Description': '', 'FriendlyName': 'dataverse_password', 'Type': 'String', 'IsOptional': False, 'DefaultValue': '' } 
+@INPUT dataverse_tenant : { 'Description': '', 'FriendlyName': 'dataverse_tenant', 'Type': 'String', 'IsOptional': False, 'DefaultValue': 'b446b8ee-6e20-4988-ad71-58e4aca2a7f9' } 
+@INPUT dataverse_baseurl : { 'Description': '', 'FriendlyName': 'dataverse_baseurl', 'Type': 'String', 'IsOptional': False, 'DefaultValue': 'https://orga2a0a858.crm5.dynamics.com' } 
+@INPUT dataverse_client_id : { 'Description': '', 'FriendlyName': 'dataverse_client_id', 'Type': 'String', 'IsOptional': False, 'DefaultValue': 'defe7f35-7328-4040-ba34-baaf1b239b78' } 
+@INPUT dataverse_secret : { 'Description': '', 'FriendlyName': 'dataverse_secret', 'Type': 'String', 'IsOptional': False, 'DefaultValue': '' } 
+CALL 'Dataverse with Client Cred Auth'
+# Get a List of Invoice Requests
+Web.InvokeWebService.InvokeWebService Url: $'''%dataverse_baseurl%/api/data/v9.2/mss_processinvoicerequests?$filter=mss_referencenumber eq \\'0001\\'''' Method: Web.Method.Get Accept: $'''*/*''' ContentType: $'''application/json''' CustomHeaders: $'''Authorization:Bearer %dataverse_token%''' ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False Response=> GetPIRResponse StatusCode=> StatusCode2
+Variables.ConvertJsonToCustomObject Json: GetPIRResponse CustomObject=> InvoiceRequestsObject
+LOOP FOREACH CurrentInvoiceRequest IN InvoiceRequestsObject.value
+    # Update each request
+    Web.InvokeWebService.InvokeWebService Url: $'''%dataverse_baseurl%/api/data/v9.2/mss_processinvoicerequests(%CurrentInvoiceRequest.mss_processinvoicerequestid%)''' Method: Web.Method.Patch Accept: $'''application/json''' ContentType: $'''application/json''' CustomHeaders: $'''Authorization:Bearer %dataverse_token%''' RequestBody: $'''{\\\"mss_approvalcomments\\\" : \\\"approving 0001\\\"}''' ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False StatusCode=> StatusCode3
+END
+FUNCTION 'Dataverse with Password Auth' GLOBAL
+    Web.InvokeWebService.InvokeWebService Url: $'''https://login.microsoftonline.com/%dataverse_tenant%/oauth2/v2.0/token''' Method: Web.Method.Post Accept: $'''*/*''' ContentType: $'''application/x-www-form-urlencoded''' RequestBody: $'''grant_type=password&client_id=2ad88395-b77d-4561-9441-d0e40824f9bc&username=%dataverse_username%&password=%dataverse_password%&scope=%dataverse_baseurl%//user_impersonation''' ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False Response=> AuthenticationResponse StatusCode=> StatusCode
+    Variables.ConvertJsonToCustomObject Json: AuthenticationResponse CustomObject=> AuthenticationResponseJson
+    SET dataverse_token TO AuthenticationResponseJson.access_token
+END FUNCTION
+FUNCTION 'Dataverse with Client Cred Auth' GLOBAL
+    Web.InvokeWebService.InvokeWebService Url: $'''https://login.microsoftonline.com/%dataverse_tenant%/oauth2/v2.0/token''' Method: Web.Method.Post Accept: $'''*/*''' ContentType: $'''application/x-www-form-urlencoded''' RequestBody: $'''grant_type=client_credentials&client_id=%dataverse_client_id%&client_secret=%dataverse_secret%&scope=%dataverse_baseurl%/.default''' ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False Response=> AuthenticationResponse StatusCode=> StatusCode
+    Variables.ConvertJsonToCustomObject Json: AuthenticationResponse CustomObject=> AuthenticationResponseJson
+    SET dataverse_token TO AuthenticationResponseJson.access_token
+END FUNCTION
+"
