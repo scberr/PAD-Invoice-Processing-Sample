@@ -9,7 +9,7 @@ on:
       target_environment_url:
         description: 'The environment to deploy to'
         required: true
-        default: 'https://org00df5917.crm.dynamics.com'   
+        default: ${{ github.ref == 'refs/heads/main' && 'https://org00df5917.crm.dynamics.com'  || 'https://org00df5917.crm.dynamics.com'   }} 
 permissions:
   contents: write
 jobs:
