@@ -1,0 +1,36 @@
+"@@ConnectionString: ''
+@@Type: 'Local'
+@@DesktopType: 'local'
+@@DisplayName: 'Local computer'
+IMPORT 'controlRepo.appmask' AS appmask
+IMPORT 'imageRepo.imgrepo' AS imgrepo
+@SENSITIVE: []
+@INPUT AccountName : { 'Description': '', 'FriendlyName': 'AccountName', 'DefaultValue': 'Sample Account Name', 'Type': 'String' } 
+@INPUT ContactName : { 'Description': '', 'FriendlyName': 'Contact Name', 'DefaultValue': 'Sample Contact Name', 'Type': 'String' } 
+@INPUT Amount : { 'Description': '', 'FriendlyName': 'Amount', 'DefaultValue': '555.55', 'Type': 'String' } 
+@OUTPUT CreatedInternalInvoiceNumber : { 'Description': '', 'FriendlyName': 'Created Internal Invoice Number', 'Type': 'String' } 
+BLOCK ErrorHander
+ON BLOCK ERROR
+CALL ErrorHandler
+THROW ERROR
+END
+    System.RunApplication.RunApplication ApplicationPath: $'''C:\\\\Program Files (x86)\\\\Contoso, Inc\\\\Contoso Invoicing\\\\LegacyInvoicingApp.exe''' WorkingDirectory: $'''C:\\\\Program Files (x86)\\\\Contoso, Inc\\\\Contoso Invoicing''' WindowStyle: System.ProcessWindowStyle.Normal ProcessId=> AppProcessId
+    @@source: 'Recorder'
+    UIAutomation.Click Element: appmask['Window \\'Contoso Invoicing\\'']['Text \\'Invoices\\''] ClickType: UIAutomation.ClickType.LeftClick OffsetX: 15 OffsetY: 2 MousePositionRelativeToElement: UIAutomation.RectangleEdgePoint.MiddleLeft
+    @@source: 'Recorder'
+    UIAutomation.Click Element: appmask['Window \\'Contoso Invoicing\\'']['Image \\'Image\\''] ClickType: UIAutomation.ClickType.LeftClick OffsetX: -2 OffsetY: -2 MousePositionRelativeToElement: UIAutomation.RectangleEdgePoint.MiddleRight
+    UIAutomation.PopulateTextField TextField: appmask['Window \\'Contoso Invoicing\\'']['Edit \\'TextBox\\' 2'] Text: AccountName Mode: UIAutomation.PopulateTextMode.Replace ClickType: UIAutomation.PopulateMouseClickType.SingleClick
+    UIAutomation.PopulateTextField TextField: appmask['Window \\'Contoso Invoicing\\'']['Edit \\'TextBox\\' 3'] Text: ContactName Mode: UIAutomation.PopulateTextMode.Replace ClickType: UIAutomation.PopulateMouseClickType.SingleClick
+    UIAutomation.PopulateTextField TextField: appmask['Window \\'Contoso Invoicing\\'']['Edit \\'TextBox\\' 4'] Text: Amount Mode: UIAutomation.PopulateTextMode.Replace ClickType: UIAutomation.PopulateMouseClickType.SingleClick
+    @@source: 'Recorder'
+    UIAutomation.Click Element: appmask['Window \\'Contoso Invoicing\\'']['Image \\'Image\\' 2'] ClickType: UIAutomation.ClickType.LeftClick OffsetX: 4 OffsetY: 1 MousePositionRelativeToElement: UIAutomation.RectangleEdgePoint.MiddleLeft
+    UIAutomation.GetElementDetails Element: appmask['Window \\'Contoso Invoicing\\'']['Text \\'1039\\''] AttributeName: $'''name''' AttributeValue=> CreatedInternalInvoiceNumber
+    UIAutomation.CloseWindow.Close Window: appmask['Window \\'Contoso Invoicing\\'']
+END
+FUNCTION ErrorHandler GLOBAL
+    ERROR => LastError
+    /# dOH
+#/
+    Workstation.PlaySound.PlaySystemSound SystemSound: System.SystemSound.Asterisk
+END FUNCTION
+"
