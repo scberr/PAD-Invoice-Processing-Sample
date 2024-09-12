@@ -43,7 +43,7 @@ jobs:
         lfs: true
     
     - name: extract-robinscript
-      run: .github/workflows/scripts/unpack-robinscript.ps1 -folderName ${{ github.event.inputs.solution_folder}}/${{ github.event.inputs.solution_name }}/Workflows/InvoiceValidationandProcessing/InvoiceValidationandProcessing.flow.json ${{ github.event.inputs.solution_folder}}/${{ github.event.inputs.solution_name }}/Workflows
+      run: .github/workflows/scripts/unpack-robinscript.ps1 -folderName ${{ github.event.inputs.solution_folder}}/${{ github.event.inputs.solution_name }}/Workflows
       shell: pwsh 
 
     - name: setup-power-platform-actions
