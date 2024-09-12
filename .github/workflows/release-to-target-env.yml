@@ -14,7 +14,7 @@ permissions:
   contents: write
 jobs:
   Release-solution-Invoicevalidationandprocessing:
-    uses: ./.github/workflows/release-solution-with-inputs.yml
+    uses: ./.github/workflows/release-to-target-with-inputs.yml
     with:
       #You can specify the solution name here
       solution_name: Invoicevalidationandprocessing
