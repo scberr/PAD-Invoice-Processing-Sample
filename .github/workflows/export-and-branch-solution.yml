@@ -69,9 +69,9 @@ jobs:
         solution-type: 'Unmanaged'
         overwrite-files: true
 
-    - name: extract-robinscript
-      run: ./scripts/unpack-robinscript.ps1 -folderName ${{ github.event.inputs.solution_folder}}/${{ github.event.inputs.solution_name }}/Workflows/InvoiceValidationandProcessing/InvoiceValidationandProcessing.flow.json ${{ github.event.inputs.solution_folder}}/${{ github.event.inputs.solution_name }}/Workflows
-      shell: pwsh 
+#    - name: extract-robinscript
+#      run: ./scripts/unpack-robinscript.ps1 -folderName ${{ github.event.inputs.solution_folder}}/${{ github.event.inputs.solution_name }}/Workflows/InvoiceValidationandProcessing/InvoiceValidationandProcessing.flow.json ${{ github.event.inputs.solution_folder}}/${{ github.event.inputs.solution_name }}/Workflows
+#      shell: pwsh 
 
     - name: branch-solution, prepare it for a PullRequest
       uses: microsoft/powerplatform-actions/branch-solution@v0
