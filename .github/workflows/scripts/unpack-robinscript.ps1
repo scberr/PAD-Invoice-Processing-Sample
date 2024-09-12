@@ -22,6 +22,9 @@ Get-ChildItem -Path $folderName -Filter *.xml | ForEach-Object {
 
         # Save the modified content to a new file with a .robin suffix
         $newFileName = [System.IO.Path]::ChangeExtension($xmlFile, ".robin")
-        Set-Content -Path $newFileName -Value $modifiedContent
+        #Set-Content -Path $newFileName -Value $modifiedContent
+        [IO.File]::WriteAllLines($newFileName, $modifiedContent)
+        
+        
     }
 }
