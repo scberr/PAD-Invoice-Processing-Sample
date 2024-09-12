@@ -1,4 +1,4 @@
-name: Release action
+name: release-to-target-env
 # Call the reusable workflow release-solution-with-inputs.yml
 # Release your solution to prod when you create a new release.
 
@@ -14,7 +14,7 @@ permissions:
   contents: write
 jobs:
   Release-solution-Invoicevalidationandprocessing:
-    uses: ./.github/workflows/release-solution-to-prod-with-inputs.yml
+    uses: ./.github/workflows/release-solution-with-inputs.yml
     with:
       #You can specify the solution name here
       solution_name: Invoicevalidationandprocessing
