@@ -17,6 +17,7 @@ WebAutomation.PopulateTextField.PopulateTextFieldUsePhysicalKeyboard BrowserInst
 WebAutomation.PressButton.PressButton BrowserInstance: Browser Control: appmask['Web Page \\'https://contosotimelog.azurewebsites.net/\\'']['Input submit \\'Login\\'']
 @@source: 'Recorder'
 WebAutomation.ExtractData.ExtractHtmlTable BrowserInstance: Browser Control: $'''html > body > div > main > div > table''' ExtractionParameters: { ^['Project Code', 'Project Name', 'Broker', 'Period Start', 'Period End', 'Total Hours'], ['Project Code', 'Project Name', 'Broker', 'Period Start', 'Period End', 'Total Hours'], ['', '', '', '', '', ''] } ExtractedData=> ProjectSummaryTable
+# This is a comment that I'm going to test editing in source code. This is my edit!
 LOOP FOREACH CurrentProjectRow IN ProjectSummaryTable
     SET CurrentNumber TO CurrentProjectRow[0]
     IF CurrentProjectRow[0] = ProjectCode THEN

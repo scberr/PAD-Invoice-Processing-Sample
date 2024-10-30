@@ -1,87 +1,101 @@
 {
   "properties": {
     "connectionReferences": {
-      "shared_commondataserviceforapps": {
-        "runtimeSource": "embedded",
-        "connection": {
-          "connectionReferenceLogicalName": "mss_sharedcommondataserviceforapps_31651"
-        },
+      "shared_commondataserviceforapps_1": {
         "api": {
           "name": "shared_commondataserviceforapps"
-        }
-      },
-      "shared_uiflow": {
-        "runtimeSource": "embedded",
-        "connection": {
-          "connectionReferenceLogicalName": "new_shareduiflow_764cd"
         },
-        "api": {
-          "name": "shared_uiflow"
-        }
-      },
-      "shared_approvals_1": {
-        "runtimeSource": "embedded",
-        "connection": {
-          "connectionReferenceLogicalName": "new_sharedapprovals_1ec42"
-        },
-        "api": {
-          "name": "shared_approvals"
-        }
-      },
-      "shared_commondataserviceforapps_1": {
-        "runtimeSource": "embedded",
         "connection": {
           "connectionReferenceLogicalName": "autocoe_DataverseAutoCoESatellitecurrent"
         },
+        "runtimeSource": "embedded"
+      },
+      "shared_commondataserviceforapps": {
         "api": {
           "name": "shared_commondataserviceforapps"
-        }
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "mss_sharedcommondataserviceforapps_31651"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_uiflow-1": {
+        "api": {
+          "name": "shared_uiflow"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "mss_shareduiflow_26620"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_approvals_1": {
+        "api": {
+          "name": "shared_approvals"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedapprovals_1ec42"
+        },
+        "runtimeSource": "embedded"
       },
       "shared_office365": {
-        "runtimeSource": "embedded",
+        "api": {
+          "name": "shared_office365"
+        },
         "connection": {
           "connectionReferenceLogicalName": "mss_sharedoffice365_5cd95"
         },
+        "runtimeSource": "embedded"
+      },
+      "shared_keyvault": {
         "api": {
-          "name": "shared_office365"
-        }
+          "name": "shared_keyvault"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "mss_sharedkeyvault_d9857"
+        },
+        "runtimeSource": "embedded"
       },
       "shared_keyvault_1": {
-        "runtimeSource": "embedded",
+        "api": {
+          "name": "shared_keyvault"
+        },
         "connection": {
           "connectionReferenceLogicalName": "mss_sharedkeyvault_eb4b1"
         },
-        "api": {
-          "name": "shared_keyvault"
-        }
+        "runtimeSource": "embedded"
       }
     },
     "definition": {
       "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
       "contentVersion": "1.0.0.0",
       "parameters": {
-        "$connections": {
-          "defaultValue": {},
-          "type": "Object"
-        },
         "$authentication": {
           "defaultValue": {},
           "type": "SecureObject"
         },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
         "Project Invoice Validation - Shared Mailbox Address (mss_ProjectInvoiceValidationSharedMailboxAddress)": {
-          "defaultValue": "accountsmanagement@demopp003.onmicrosoft.com",
+          "defaultValue": "accountsmanagement@MngEnvMCAP472710.onmicrosoft.com",
           "type": "String",
           "metadata": {
             "schemaName": "mss_ProjectInvoiceValidationSharedMailboxAddress",
             "description": "The email address of the shared mailbox that receives invoices"
           }
+        },
+        "Project Invoice Validation - Work Queue ID (mss_ProjectInvoiceValidationWorkQueueID)": {
+          "defaultValue": "39c779bd-f96f-ef11-a671-000d3a4f087a",
+          "type": "String",
+          "metadata": {
+            "schemaName": "mss_ProjectInvoiceValidationWorkQueueID",
+            "description": "The GUID of the Work Queue for processing Project Invoices"
+          }
         }
       },
       "triggers": {
         "When_a_Project_Invoice_Validation_Item_is_Queued": {
-          "metadata": {
-            "operationMetadataId": "e44b24fc-47c3-4060-b156-cd52d4926913"
-          },
           "type": "OpenApiConnectionWebhook",
           "inputs": {
             "parameters": {
@@ -93,25 +107,40 @@
               "subscriptionRequest/name": "dae41b19-9c2a-ee11-9965-000d3aa22ffd"
             },
             "host": {
-              "connectionName": "shared_commondataserviceforapps_1",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
               "operationId": "SubscribeWebhookTrigger",
-              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
-            },
-            "authentication": "@parameters('$authentication')"
+              "connectionName": "shared_commondataserviceforapps_1"
+            }
           },
           "conditions": [
             {
               "expression": "@equals(triggerOutputs()?['body/statuscode'],0)"
             }
-          ]
+          ],
+          "metadata": {
+            "operationMetadataId": "e44b24fc-47c3-4060-b156-cd52d4926913"
+          }
         }
       },
       "actions": {
         "Apply_to_each_Attachment": {
+          "type": "Foreach",
           "foreach": "@outputs('Get_Requesting_Email')?['body/attachments']",
           "actions": {
             "Analyse_Invoice_with_AI_Builder": {
-              "runAfter": {},
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "recordId": "5f629454-7788-4677-9ddc-c1e62c44c6ad",
+                  "item/requestv2/mimeType": "@items('Apply_to_each_Attachment')?['contentType']",
+                  "item/requestv2/base64Encoded": "@items('Apply_to_each_Attachment')?['contentBytes']"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "aibuilderpredict",
+                  "connectionName": "shared_commondataserviceforapps"
+                }
+              },
               "metadata": {
                 "operationMetadataId": "8c7e7c0a-778f-49bf-b9dc-7b17b123e282",
                 "flowSystemMetadata": {
@@ -122,31 +151,9 @@
                   "portalOperationBrandColorOverride": "#0A76C4",
                   "portalOperationApiTierOverride": "Standard"
                 }
-              },
-              "type": "OpenApiConnection",
-              "inputs": {
-                "parameters": {
-                  "recordId": "5f629454-7788-4677-9ddc-c1e62c44c6ad",
-                  "item/requestv2/mimeType": "@items('Apply_to_each_Attachment')?['contentType']",
-                  "item/requestv2/base64Encoded": "@items('Apply_to_each_Attachment')?['contentBytes']"
-                },
-                "host": {
-                  "connectionName": "shared_commondataserviceforapps",
-                  "operationId": "aibuilderpredict",
-                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
-                },
-                "authentication": "@parameters('$authentication')"
               }
             },
             "Get_the_Total_Hours_from_the_TimeLog_website": {
-              "runAfter": {
-                "Analyse_Invoice_with_AI_Builder": [
-                  "Succeeded"
-                ]
-              },
-              "metadata": {
-                "operationMetadataId": "6b7e66e0-3d22-45e7-af60-de7b492b0da4"
-              },
               "type": "OpenApiConnection",
               "inputs": {
                 "parameters": {
@@ -157,45 +164,73 @@
                   "item/ProjectCode": "@outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Project_023020132a3ef053e8294de5f8f7fdd1/value']"
                 },
                 "host": {
-                  "connectionName": "shared_uiflow",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_uiflow",
                   "operationId": "RunUIFlow_V2",
-                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_uiflow"
-                },
-                "authentication": "@parameters('$authentication')"
+                  "connectionName": "shared_uiflow-1"
+                }
+              },
+              "runAfter": {
+                "Analyse_Invoice_with_AI_Builder": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "6b7e66e0-3d22-45e7-af60-de7b492b0da4"
               }
             },
             "Do_hours_match_in_both_systems": {
+              "type": "If",
+              "expression": {
+                "equals": [
+                  "@outputs('Get_the_Total_Hours_from_the_TimeLog_website')?['body/ProjectHours']",
+                  "@outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Total_005aec9737703b0c7d744ad16e0b66b4d5/value']"
+                ]
+              },
               "actions": {
                 "Set_reconciliation_status_to_success": {
-                  "runAfter": {},
-                  "metadata": {
-                    "operationMetadataId": "f00878af-03b9-46f6-9382-c5a804de60b4"
-                  },
                   "type": "SetVariable",
                   "inputs": {
                     "name": "isReconciliationSuccessful",
                     "value": true
+                  },
+                  "metadata": {
+                    "operationMetadataId": "f00878af-03b9-46f6-9382-c5a804de60b4"
                   }
                 }
-              },
-              "runAfter": {
-                "Compose": [
-                  "Succeeded"
-                ]
               },
               "else": {
                 "actions": {
                   "Was_Approval_Granted": {
+                    "type": "If",
+                    "expression": {
+                      "equals": [
+                        "@outputs('Start_and_wait_for_an_approval_2')?['body/outcome']",
+                        "Approve"
+                      ]
+                    },
                     "actions": {
                       "Set_reconciliation_successful": {
-                        "runAfter": {},
-                        "metadata": {
-                          "operationMetadataId": "579cc591-945d-43f2-bc48-b4d951dbd5a8"
-                        },
                         "type": "SetVariable",
                         "inputs": {
                           "name": "isReconciliationSuccessful",
                           "value": true
+                        },
+                        "metadata": {
+                          "operationMetadataId": "579cc591-945d-43f2-bc48-b4d951dbd5a8"
+                        }
+                      }
+                    },
+                    "else": {
+                      "actions": {
+                        "Set_reconciliation_failed": {
+                          "type": "SetVariable",
+                          "inputs": {
+                            "name": "isReconciliationSuccessful",
+                            "value": false
+                          },
+                          "metadata": {
+                            "operationMetadataId": "1cc5f064-5911-4d8d-9a4a-89b52339c663"
+                          }
                         }
                       }
                     },
@@ -204,37 +239,11 @@
                         "Succeeded"
                       ]
                     },
-                    "else": {
-                      "actions": {
-                        "Set_reconciliation_failed": {
-                          "runAfter": {},
-                          "metadata": {
-                            "operationMetadataId": "1cc5f064-5911-4d8d-9a4a-89b52339c663"
-                          },
-                          "type": "SetVariable",
-                          "inputs": {
-                            "name": "isReconciliationSuccessful",
-                            "value": false
-                          }
-                        }
-                      }
-                    },
-                    "expression": {
-                      "equals": [
-                        "@outputs('Start_and_wait_for_an_approval_2')?['body/outcome']",
-                        "Approve"
-                      ]
-                    },
                     "metadata": {
                       "operationMetadataId": "56b431ad-2b00-402f-89ff-5eb57f06ae61"
-                    },
-                    "type": "If"
+                    }
                   },
                   "Start_and_wait_for_an_approval_2": {
-                    "runAfter": {},
-                    "metadata": {
-                      "operationMetadataId": "49a11dee-c501-4851-81ac-bbd1c5470ceb"
-                    },
                     "type": "OpenApiConnectionWebhook",
                     "inputs": {
                       "parameters": {
@@ -248,33 +257,36 @@
                         "WebhookApprovalCreationInput/enableReassignment": true
                       },
                       "host": {
-                        "connectionName": "shared_approvals_1",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_approvals",
                         "operationId": "StartAndWaitForAnApproval",
-                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_approvals"
-                      },
-                      "authentication": "@parameters('$authentication')"
+                        "connectionName": "shared_approvals_1"
+                      }
+                    },
+                    "metadata": {
+                      "operationMetadataId": "49a11dee-c501-4851-81ac-bbd1c5470ceb"
                     }
                   }
                 }
               },
-              "expression": {
-                "equals": [
-                  "@outputs('Get_the_Total_Hours_from_the_TimeLog_website')?['body/ProjectHours']",
-                  "@outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Total_005aec9737703b0c7d744ad16e0b66b4d5/value']"
+              "runAfter": {
+                "Compose": [
+                  "Succeeded"
                 ]
               },
               "metadata": {
                 "operationMetadataId": "598c47d5-c4d6-4d70-8413-fca3c698ce94"
-              },
-              "type": "If"
+              }
             },
             "Condition": {
+              "type": "If",
+              "expression": {
+                "equals": [
+                  "@variables('isReconciliationSuccessful')",
+                  true
+                ]
+              },
               "actions": {
                 "Post_the_Invoice_in_the_ERP": {
-                  "runAfter": {},
-                  "metadata": {
-                    "operationMetadataId": "cdb95260-0561-45e5-abb7-008738cdbd2b"
-                  },
                   "type": "OpenApiConnection",
                   "inputs": {
                     "parameters": {
@@ -285,22 +297,16 @@
                       "item/Amount": "@outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Total_00809d0fb61b4acec40ff234df9712240d/value']"
                     },
                     "host": {
-                      "connectionName": "shared_uiflow",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_uiflow",
                       "operationId": "RunUIFlow_V2",
-                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_uiflow"
-                    },
-                    "authentication": "@parameters('$authentication')"
+                      "connectionName": "shared_uiflow-1"
+                    }
+                  },
+                  "metadata": {
+                    "operationMetadataId": "cdb95260-0561-45e5-abb7-008738cdbd2b"
                   }
                 },
                 "Set_Status_to_Processed-_Success": {
-                  "runAfter": {
-                    "Send_Posted_for_Payment_Email": [
-                      "Succeeded"
-                    ]
-                  },
-                  "metadata": {
-                    "operationMetadataId": "e74b48e8-7b43-4c3d-a9b6-5f84581deda6"
-                  },
                   "type": "OpenApiConnection",
                   "inputs": {
                     "parameters": {
@@ -310,14 +316,37 @@
                       "item/statuscode": 2
                     },
                     "host": {
-                      "connectionName": "shared_commondataserviceforapps_1",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
                       "operationId": "UpdateRecord",
-                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
-                    },
-                    "authentication": "@parameters('$authentication')"
+                      "connectionName": "shared_commondataserviceforapps_1"
+                    }
+                  },
+                  "runAfter": {
+                    "Send_Posted_for_Payment_Email": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "e74b48e8-7b43-4c3d-a9b6-5f84581deda6"
                   }
                 },
                 "Send_Posted_for_Payment_Email": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "emailMessage/MailboxAddress": "@parameters('Project Invoice Validation - Shared Mailbox Address (mss_ProjectInvoiceValidationSharedMailboxAddress)')",
+                      "emailMessage/To": "@outputs('Get_Requesting_Email')?['body/from']",
+                      "emailMessage/Subject": "Invoice for project @{outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Project_023020132a3ef053e8294de5f8f7fdd1/value']} Submitted for Payment",
+                      "emailMessage/Body": "<p>To whom it may concern,<br>\n<br>\nThe @{outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Period_01173487c80f24824b9d64c3e4ade004e/value']} invoice for project  @{outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Project_023020132a3ef053e8294de5f8f7fdd1/value']} has submitted for payment with reference id @{outputs('Post_the_Invoice_in_the_ERP')?['body/CreatedInternalInvoiceNumber']}<br>\n<br>\nThe invoice had the following details:</p>\n<ul>\n  <li>Invoice Amount: @{outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Total_00809d0fb61b4acec40ff234df9712240d/value']}</li>\n  <li>Hours in Invoice: @{outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Total_005aec9737703b0c7d744ad16e0b66b4d5/value']}</li>\n</ul>\n<p>Regards,<br>\n<br>\nContoso Accounts</p>",
+                      "emailMessage/Cc": "@outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Internal191c1dffae2cb003c54b93dfda140d76/value']",
+                      "emailMessage/Importance": "Normal"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365",
+                      "operationId": "SharedMailboxSendEmailV2",
+                      "connectionName": "shared_office365"
+                    }
+                  },
                   "runAfter": {
                     "Post_the_Invoice_in_the_ERP": [
                       "Succeeded"
@@ -325,63 +354,31 @@
                   },
                   "metadata": {
                     "operationMetadataId": "56e98af5-d868-439f-82d1-23cdcc46c5c0"
-                  },
-                  "type": "OpenApiConnection",
-                  "inputs": {
-                    "host": {
-                      "connectionName": "shared_office365",
-                      "operationId": "SharedMailboxSendEmailV2",
-                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
-                    },
-                    "parameters": {
-                      "emailMessage/MailboxAddress": "accountsmanagement@DemoPP003.onmicrosoft.com",
-                      "emailMessage/To": "@outputs('Get_Requesting_Email')?['body/from']",
-                      "emailMessage/Subject": "Invoice for project @{outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Project_023020132a3ef053e8294de5f8f7fdd1/value']} Submitted for Payment",
-                      "emailMessage/Body": "<p>To whom it may concern,<br>\n<br>\nThe @{outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Period_01173487c80f24824b9d64c3e4ade004e/value']} invoice for project  @{outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Project_023020132a3ef053e8294de5f8f7fdd1/value']} has submitted for payment with reference id @{outputs('Post_the_Invoice_in_the_ERP')?['body/CreatedInternalInvoiceNumber']}<br>\n<br>\nThe invoice had the following details:</p>\n<ul>\n  <li>Invoice Amount: @{outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Total_00809d0fb61b4acec40ff234df9712240d/value']}</li>\n  <li>Hours in Invoice: @{outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Total_005aec9737703b0c7d744ad16e0b66b4d5/value']}</li>\n</ul>\n<p>Regards,<br>\n<br>\nContoso Accounts</p>",
-                      "emailMessage/Cc": "@outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Internal191c1dffae2cb003c54b93dfda140d76/value']",
-                      "emailMessage/Importance": "Normal"
-                    },
-                    "authentication": "@parameters('$authentication')"
                   }
                 }
-              },
-              "runAfter": {
-                "Do_hours_match_in_both_systems": [
-                  "Succeeded"
-                ]
               },
               "else": {
                 "actions": {
                   "Send_Rejected_Email": {
-                    "runAfter": {},
-                    "metadata": {
-                      "operationMetadataId": "e4fe4bca-391f-476c-8d3f-e5d95e775040"
-                    },
                     "type": "OpenApiConnection",
                     "inputs": {
-                      "host": {
-                        "connectionName": "shared_office365",
-                        "operationId": "SendEmailV2",
-                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
-                      },
                       "parameters": {
                         "emailMessage/To": "@outputs('Get_Requesting_Email')?['body/from']",
                         "emailMessage/Subject": "Invoice for project @{outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Project_023020132a3ef053e8294de5f8f7fdd1/value']} Rejected",
                         "emailMessage/Body": "<p>The invoice had the following details:<br>\nInvoice Amount: @{outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Total_00809d0fb61b4acec40ff234df9712240d/value']}<br>\nHours in Invoice: @{outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Total_005aec9737703b0c7d744ad16e0b66b4d5/value']}</p>",
                         "emailMessage/Importance": "Normal"
                       },
-                      "authentication": "@parameters('$authentication')"
+                      "host": {
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365",
+                        "operationId": "SendEmailV2",
+                        "connectionName": "shared_office365"
+                      }
+                    },
+                    "metadata": {
+                      "operationMetadataId": "e4fe4bca-391f-476c-8d3f-e5d95e775040"
                     }
                   },
                   "Set_Status_to_Processed_-_Rejected": {
-                    "runAfter": {
-                      "Send_Rejected_Email": [
-                        "Succeeded"
-                      ]
-                    },
-                    "metadata": {
-                      "operationMetadataId": "e74b48e8-7b43-4c3d-a9b6-5f84581deda6"
-                    },
                     "type": "OpenApiConnection",
                     "inputs": {
                       "parameters": {
@@ -391,27 +388,34 @@
                         "item/statuscode": 2
                       },
                       "host": {
-                        "connectionName": "shared_commondataserviceforapps_1",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
                         "operationId": "UpdateRecord",
-                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
-                      },
-                      "authentication": "@parameters('$authentication')"
+                        "connectionName": "shared_commondataserviceforapps_1"
+                      }
+                    },
+                    "runAfter": {
+                      "Send_Rejected_Email": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "e74b48e8-7b43-4c3d-a9b6-5f84581deda6"
                     }
                   }
                 }
               },
-              "expression": {
-                "equals": [
-                  "@variables('isReconciliationSuccessful')",
-                  true
+              "runAfter": {
+                "Do_hours_match_in_both_systems": [
+                  "Succeeded"
                 ]
               },
               "metadata": {
                 "operationMetadataId": "2ea092e0-a0eb-4c4a-86c0-9a2bc088479a"
-              },
-              "type": "If"
+              }
             },
             "Compose": {
+              "type": "Compose",
+              "inputs": "Hours Logged=[@{outputs('Get_the_Total_Hours_from_the_TimeLog_website')?['body/ProjectHours']}]\nHours from AI Builder=[@{outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Total_005aec9737703b0c7d744ad16e0b66b4d5/value']}]",
               "runAfter": {
                 "Get_the_Total_Hours_from_the_TimeLog_website": [
                   "Succeeded"
@@ -419,9 +423,7 @@
               },
               "metadata": {
                 "operationMetadataId": "747af7d6-926f-4361-b116-763eaba87f16"
-              },
-              "type": "Compose",
-              "inputs": "Hours Logged=[@{outputs('Get_the_Total_Hours_from_the_TimeLog_website')?['body/ProjectHours']}]\nHours from AI Builder=[@{outputs('Analyse_Invoice_with_AI_Builder')?['body/responsev2/predictionOutput/labels/Total_005aec9737703b0c7d744ad16e0b66b4d5/value']}]"
+              }
             }
           },
           "runAfter": {
@@ -429,17 +431,29 @@
               "Succeeded"
             ]
           },
-          "metadata": {
-            "operationMetadataId": "844674a0-737a-45df-88b1-3f8072b917bf"
-          },
-          "type": "Foreach",
           "runtimeConfiguration": {
             "concurrency": {
               "repetitions": 20
             }
+          },
+          "metadata": {
+            "operationMetadataId": "844674a0-737a-45df-88b1-3f8072b917bf"
           }
         },
         "Get_Requesting_Email": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "messageId": "@triggerOutputs()?['body/input']",
+              "mailboxAddress": "@{parameters('Project Invoice Validation - Shared Mailbox Address (mss_ProjectInvoiceValidationSharedMailboxAddress)')};",
+              "includeAttachments": true
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365",
+              "operationId": "GetEmailV2",
+              "connectionName": "shared_office365"
+            }
+          },
           "runAfter": {
             "Stage_0_-_Setup_Variables": [
               "Succeeded"
@@ -447,38 +461,13 @@
           },
           "metadata": {
             "operationMetadataId": "c94a244c-1b94-4640-ba69-0bf7a419545d"
-          },
-          "type": "OpenApiConnection",
-          "inputs": {
-            "host": {
-              "connectionName": "shared_office365",
-              "operationId": "GetEmailV2",
-              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
-            },
-            "parameters": {
-              "messageId": "@triggerOutputs()?['body/input']",
-              "mailboxAddress": "@{parameters('Project Invoice Validation - Shared Mailbox Address (mss_ProjectInvoiceValidationSharedMailboxAddress)')};",
-              "includeAttachments": true
-            },
-            "authentication": "@parameters('$authentication')"
           }
         },
         "Stage_0_-_Setup_Variables": {
+          "type": "Scope",
           "actions": {
             "Terminate_if_wrong_queue": {
-              "actions": {
-                "Terminate": {
-                  "runAfter": {},
-                  "metadata": {
-                    "operationMetadataId": "ac25fe35-321e-422f-bedc-032fc3d324d1"
-                  },
-                  "type": "Terminate",
-                  "inputs": {
-                    "runStatus": "Succeeded"
-                  }
-                }
-              },
-              "runAfter": {},
+              "type": "If",
               "expression": {
                 "or": [
                   {
@@ -493,26 +482,31 @@
                     "not": {
                       "equals": [
                         "@triggerOutputs()?['body/_workqueueid_value']",
-                        "8395834a-982a-ee11-9965-6045bd1e843b"
+                        "@parameters('Project Invoice Validation - Work Queue ID (mss_ProjectInvoiceValidationWorkQueueID)')"
                       ]
                     }
                   }
                 ]
               },
+              "actions": {
+                "Terminate": {
+                  "type": "Terminate",
+                  "inputs": {
+                    "runStatus": "Succeeded"
+                  },
+                  "metadata": {
+                    "operationMetadataId": "ac25fe35-321e-422f-bedc-032fc3d324d1"
+                  }
+                }
+              },
+              "else": {
+                "actions": {}
+              },
               "metadata": {
                 "operationMetadataId": "aa8a842b-3659-48f9-9062-73cb21dcc344"
-              },
-              "type": "If"
+              }
             },
             "Set_Status_to_Processing": {
-              "runAfter": {
-                "Terminate_if_wrong_queue": [
-                  "Succeeded"
-                ]
-              },
-              "metadata": {
-                "operationMetadataId": "e74b48e8-7b43-4c3d-a9b6-5f84581deda6"
-              },
               "type": "OpenApiConnection",
               "inputs": {
                 "parameters": {
@@ -522,14 +516,32 @@
                   "item/statuscode": 1
                 },
                 "host": {
-                  "connectionName": "shared_commondataserviceforapps_1",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
                   "operationId": "UpdateRecord",
-                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
-                },
-                "authentication": "@parameters('$authentication')"
+                  "connectionName": "shared_commondataserviceforapps_1"
+                }
+              },
+              "runAfter": {
+                "Terminate_if_wrong_queue": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "e74b48e8-7b43-4c3d-a9b6-5f84581deda6"
               }
             },
             "Get_TimeLogUsername": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "secretName": "TimeLogUsername"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_keyvault",
+                  "operationId": "GetSecret",
+                  "connectionName": "shared_keyvault"
+                }
+              },
               "runAfter": {
                 "Set_Status_to_Processing": [
                   "Succeeded"
@@ -537,21 +549,20 @@
               },
               "metadata": {
                 "operationMetadataId": "d503ad0a-8187-439d-9eae-82fe4a458cf8"
-              },
-              "type": "OpenApiConnection",
-              "inputs": {
-                "parameters": {
-                  "secretName": "TimeLogUsername"
-                },
-                "host": {
-                  "connectionName": "shared_keyvault_1",
-                  "operationId": "GetSecret",
-                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_keyvault"
-                },
-                "authentication": "@parameters('$authentication')"
               }
             },
             "Get_TimeLogPassword": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "secretName": "TimeLogPassword"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_keyvault",
+                  "operationId": "GetSecret",
+                  "connectionName": "shared_keyvault_1"
+                }
+              },
               "runAfter": {
                 "Get_TimeLogUsername": [
                   "Succeeded"
@@ -559,18 +570,6 @@
               },
               "metadata": {
                 "operationMetadataId": "d8245e45-c4b1-4ed8-8428-9bf942386404"
-              },
-              "type": "OpenApiConnection",
-              "inputs": {
-                "parameters": {
-                  "secretName": "TimeLogPassword"
-                },
-                "host": {
-                  "connectionName": "shared_keyvault_1",
-                  "operationId": "GetSecret",
-                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_keyvault"
-                },
-                "authentication": "@parameters('$authentication')"
               }
             }
           },
@@ -581,14 +580,9 @@
           },
           "metadata": {
             "operationMetadataId": "1a15a83f-064d-44b8-8918-0385a7b9218b"
-          },
-          "type": "Scope"
+          }
         },
         "Initialize_isReconciliationSuccessful": {
-          "runAfter": {},
-          "metadata": {
-            "operationMetadataId": "661f53f9-b076-45a8-9f6c-00c310fbbeb1"
-          },
           "type": "InitializeVariable",
           "inputs": {
             "variables": [
@@ -598,11 +592,15 @@
                 "value": false
               }
             ]
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "661f53f9-b076-45a8-9f6c-00c310fbbeb1"
           }
         }
       }
     },
-    "templateName": ""
+    "templateName": null
   },
   "schemaVersion": "1.0.0.0"
 }
