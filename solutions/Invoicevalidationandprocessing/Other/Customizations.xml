@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.24094.228" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.24094.00228">
   <Entities />
   <Roles />
   <Workflows />
@@ -103,6 +103,14 @@
       <statecode>0</statecode>
       <statuscode>1</statuscode>
     </connectionreference>
+    <connectionreference connectionreferencelogicalname="mss_sharedkeyvault_d9857">
+      <connectionreferencedisplayname>Azure Key Vault Invoicevalidationandprocessing-d9857</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_keyvault</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
     <connectionreference connectionreferencelogicalname="mss_sharedkeyvault_eb4b1">
       <connectionreferencedisplayname>Azure Key Vault Invoicevalidationandprocessing-eb4b1</connectionreferencedisplayname>
       <connectorid>/providers/Microsoft.PowerApps/apis/shared_keyvault</connectorid>
@@ -122,6 +130,14 @@
     <connectionreference connectionreferencelogicalname="mss_sharedoffice365_5cd95">
       <connectionreferencedisplayname>Office 365 Outlook Invoicevalidationandprocessing-5cd95</connectionreferencedisplayname>
       <connectorid>/providers/Microsoft.PowerApps/apis/shared_office365</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="mss_shareduiflow_26620">
+      <connectionreferencedisplayname>Desktop flows Invoicevalidationandprocessing-26620</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_uiflow</connectorid>
       <iscustomizable>1</iscustomizable>
       <promptingbehavior>0</promptingbehavior>
       <statecode>0</statecode>
