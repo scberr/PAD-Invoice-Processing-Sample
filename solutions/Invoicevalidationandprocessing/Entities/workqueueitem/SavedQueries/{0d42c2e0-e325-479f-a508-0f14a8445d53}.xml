@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <savedquery unmodified="1">
+  <savedquery>
     <isquickfindquery>0</isquickfindquery>
     <isprivate>0</isprivate>
     <isdefault>1</isdefault>
@@ -9,7 +9,9 @@
       <grid name="resultset" jump="name" select="1" icon="1" preview="1">
         <row name="result" id="workqueueitemid">
           <cell name="name" width="300" />
+          <cell name="statecode" width="100" />
           <cell name="createdon" width="125" />
+          <cell name="modifiedon" width="113" />
         </row>
       </grid>
     </layoutxml>
@@ -20,10 +22,9 @@
           <attribute name="workqueueitemid" />
           <attribute name="name" />
           <attribute name="createdon" />
-          <order attribute="name" descending="false" />
-          <filter type="and">
-            <condition attribute="statecode" operator="eq" value="0" />
-          </filter>
+          <attribute name="statecode" />
+          <attribute name="modifiedon" />
+          <order attribute="modifiedon" descending="true" />
         </entity>
       </fetch>
     </fetchxml>

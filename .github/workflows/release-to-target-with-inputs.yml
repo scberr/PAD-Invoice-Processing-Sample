@@ -44,6 +44,11 @@ on:
         description: 'The tenant id'
         type: string
         required: true
+      DEPLOY_MANAGED: 
+        description: 'Whether to deploy the solution as managed'
+        type: boolean
+        default: true
+        required: true
     secrets:
       envSecret:
         description: 'The secret value for authentication using SPN'
@@ -65,7 +70,7 @@ jobs:
       uses: microsoft/powerplatform-actions/actions-install@v1
 
     - name: Pack Robin Scripts
-      run: .github/workflows/scripts/repack-robinscript.ps1 -folderName ${{ github.event.inputs.solution_folder}}/${{ github.event.inputs.solution_name }}/Workflows
+      run: .github/workflows/scripts/repack-robinscript.ps1 -folderName ${{ inputs.solution_source_folder}}/${{ inputs.solution_name }}/Workflows
       shell: pwsh 
 
     - name: Pack solution
@@ -94,7 +99,7 @@ jobs:
         client-secret: ${{ secrets.envSecret }} 
         tenant-id: ${{inputs.TENANT_ID}}
         solution-name: ${{ inputs.solution_name }}
-        managed: true
+        managed: ${{inputs.DEPLOY_MANAGED}}
         solution-output-file: ${{ inputs.solution_shipping_folder}}/${{ inputs.solution_name }}_managed.zip
         
     - name: Import solution to target env
