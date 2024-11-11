@@ -1,0 +1,2329 @@
+{
+  "Screens": [
+    {
+      "Controls": [
+        {
+          "AutomationProtocol": "uia3",
+          "ScreenShot": null,
+          "ElementTypeName": "Input text",
+          "InstanceId": "60e4ab47-1e88-459e-8a4b-d48c4c0e02a4",
+          "Name": "Input text 'txtUsername'",
+          "SelectorCount": 1,
+          "Selectors": [
+            {
+              "CustomSelector": null,
+              "Elements": [
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Body 'TimeLog Home Invoices Projects Privacy Welcome  ...  Password © 2022 - Contoso TimeLog - Privacy'",
+                  "Tag": "body"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "container"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Div 'Welcome Welcome to the contractor management portal, enter your details to log in Username Password'",
+                  "Tag": "div"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "pb-3"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Main content 'Welcome Welcome to the contractor management portal, enter your details to log in Username Password'",
+                  "Tag": "main"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "text-center"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Div 'Welcome Welcome to the contractor management portal, enter your details to log in Username Password'",
+                  "Tag": "div"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Action",
+                      "Operation": "EqualTo",
+                      "Value": "https://contosotimelog.azurewebsites.net/"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Method",
+                      "Operation": "EqualTo",
+                      "Value": "post"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Name",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Form 'Username Password'",
+                  "Tag": "form"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Table 'Username Password'",
+                  "Tag": "table"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Table body 'Username Password'",
+                  "Tag": "tbody"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Table row 'Username'",
+                  "Tag": "tr"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Table data cell",
+                  "Tag": "td"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Checked",
+                      "Operation": "EqualTo",
+                      "Value": "false"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Disabled",
+                      "Operation": "EqualTo",
+                      "Value": "false"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "FormAction",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "FormMethod",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": false,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": "txtUsername"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Max",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Min",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Name",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "ReadOnly",
+                      "Operation": "EqualTo",
+                      "Value": "false"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Required",
+                      "Operation": "EqualTo",
+                      "Value": "false"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Src",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Step",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Type",
+                      "Operation": "EqualTo",
+                      "Value": "text"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Value",
+                      "Operation": "EqualTo",
+                      "Value": "username"
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": false,
+                  "Name": "Input text 'txtUsername'",
+                  "Tag": "input"
+                }
+              ],
+              "Ignore": false,
+              "ImageSelector": null,
+              "IsCustom": false,
+              "IsImageBased": false,
+              "IsWindowsInstance": false,
+              "Name": "Default Selector",
+              "Properties": []
+            }
+          ],
+          "Tag": "input",
+          "ScreenshotPath": "controlRepo-screenshots\\107676b2-bb71-42e5-abbb-5451eec5db93.png"
+        },
+        {
+          "AutomationProtocol": "uia3",
+          "ScreenShot": null,
+          "ElementTypeName": "Input password",
+          "InstanceId": "79a36267-ac76-4e35-95a3-519487c42728",
+          "Name": "Input password 'txtPassword'",
+          "SelectorCount": 1,
+          "Selectors": [
+            {
+              "CustomSelector": null,
+              "Elements": [
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Body 'TimeLog Home Invoices Projects Privacy Welcome  ...  Password © 2022 - Contoso TimeLog - Privacy'",
+                  "Tag": "body"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "container"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Div 'Welcome Welcome to the contractor management portal, enter your details to log in Username Password'",
+                  "Tag": "div"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "pb-3"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Main content 'Welcome Welcome to the contractor management portal, enter your details to log in Username Password'",
+                  "Tag": "main"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "text-center"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Div 'Welcome Welcome to the contractor management portal, enter your details to log in Username Password'",
+                  "Tag": "div"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Action",
+                      "Operation": "EqualTo",
+                      "Value": "https://contosotimelog.azurewebsites.net/"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Method",
+                      "Operation": "EqualTo",
+                      "Value": "post"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Name",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Form 'Username Password'",
+                  "Tag": "form"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Table 'Username Password'",
+                  "Tag": "table"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Table body 'Username Password'",
+                  "Tag": "tbody"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Table row 'Password'",
+                  "Tag": "tr"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Table data cell",
+                  "Tag": "td"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Checked",
+                      "Operation": "EqualTo",
+                      "Value": "false"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Disabled",
+                      "Operation": "EqualTo",
+                      "Value": "false"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "FormAction",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "FormMethod",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": false,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": "txtPassword"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Max",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Min",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Name",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "ReadOnly",
+                      "Operation": "EqualTo",
+                      "Value": "false"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Required",
+                      "Operation": "EqualTo",
+                      "Value": "false"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Src",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Step",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Type",
+                      "Operation": "EqualTo",
+                      "Value": "password"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Value",
+                      "Operation": "EqualTo",
+                      "Value": "password"
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": false,
+                  "Name": "Input password 'txtPassword'",
+                  "Tag": "input"
+                }
+              ],
+              "Ignore": false,
+              "ImageSelector": null,
+              "IsCustom": false,
+              "IsImageBased": false,
+              "IsWindowsInstance": false,
+              "Name": "Default Selector",
+              "Properties": []
+            }
+          ],
+          "Tag": "input",
+          "ScreenshotPath": "controlRepo-screenshots\\ab71d431-210d-4101-b3cc-d6a4fb4697c6.png"
+        },
+        {
+          "AutomationProtocol": "uia3",
+          "ScreenShot": null,
+          "ElementTypeName": "Input submit",
+          "InstanceId": "fd5d1fd0-39ac-4ee2-8e41-69405b3712af",
+          "Name": "Input submit 'Login'",
+          "SelectorCount": 1,
+          "Selectors": [
+            {
+              "CustomSelector": null,
+              "Elements": [
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Body 'TimeLog Home Invoices Projects Privacy Welcome  ...  Password © 2022 - Contoso TimeLog - Privacy'",
+                  "Tag": "body"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "container"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Div 'Welcome Welcome to the contractor management portal, enter your details to log in Username Password'",
+                  "Tag": "div"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "pb-3"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Main content 'Welcome Welcome to the contractor management portal, enter your details to log in Username Password'",
+                  "Tag": "main"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "text-center"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Div 'Welcome Welcome to the contractor management portal, enter your details to log in Username Password'",
+                  "Tag": "div"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Action",
+                      "Operation": "EqualTo",
+                      "Value": "https://contosotimelog.azurewebsites.net/"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Method",
+                      "Operation": "EqualTo",
+                      "Value": "post"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Name",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Form 'Username Password'",
+                  "Tag": "form"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Table 'Username Password'",
+                  "Tag": "table"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Table body 'Username Password'",
+                  "Tag": "tbody"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Table row",
+                  "Tag": "tr"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": true,
+                  "Name": "Table data cell",
+                  "Tag": "td"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Checked",
+                      "Operation": "EqualTo",
+                      "Value": "false"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "btn btn-primary"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Disabled",
+                      "Operation": "EqualTo",
+                      "Value": "false"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "FormAction",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "FormMethod",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": false,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": "btnSubmit"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Max",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Min",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Name",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "ReadOnly",
+                      "Operation": "EqualTo",
+                      "Value": "false"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Required",
+                      "Operation": "EqualTo",
+                      "Value": "false"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Src",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Step",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Type",
+                      "Operation": "EqualTo",
+                      "Value": "submit"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Value",
+                      "Operation": "EqualTo",
+                      "Value": "Login"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Text",
+                      "Operation": "EqualTo",
+                      "Value": "Login"
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": false,
+                  "Name": "Input submit 'Login'",
+                  "Tag": "input"
+                }
+              ],
+              "Ignore": false,
+              "ImageSelector": null,
+              "IsCustom": false,
+              "IsImageBased": false,
+              "IsWindowsInstance": false,
+              "Name": "Default Selector",
+              "Properties": []
+            }
+          ],
+          "Tag": "input",
+          "ScreenshotPath": "controlRepo-screenshots\\53c4c5b8-9322-437a-bfd2-9d59692f95a8.png"
+        }
+      ],
+      "Handle": {
+        "value": 0
+      },
+      "ProcessName": null,
+      "ScreenShot": null,
+      "ElementTypeName": "Web Page",
+      "InstanceId": "f6afc78a-2ccc-463d-b729-edf1166cc004",
+      "Name": "Web Page 'https://contosotimelog.azurewebsites.net/'",
+      "SelectorCount": 1,
+      "Selectors": [
+        {
+          "CustomSelector": null,
+          "Elements": [
+            {
+              "Attributes": [],
+              "CustomValue": "domcontainer",
+              "Ignore": false,
+              "Name": "Web Page 'https://contosotimelog.azurewebsites.net/'",
+              "Tag": "domcontainer"
+            }
+          ],
+          "Ignore": false,
+          "ImageSelector": null,
+          "IsCustom": false,
+          "IsImageBased": false,
+          "IsWindowsInstance": false,
+          "Name": "Default Selector",
+          "Properties": []
+        }
+      ],
+      "Tag": "domcontainer",
+      "ScreenshotPath": "controlRepo-screenshots\\1ca62722-ffb3-41f5-bf8c-6bea6ce6cae4.png"
+    },
+    {
+      "Controls": [
+        {
+          "AutomationProtocol": "uia3",
+          "ScreenShot": null,
+          "ElementTypeName": "Button",
+          "InstanceId": "21276a92-91ef-46cc-a177-42f30be4dee0",
+          "Name": "Button 'Never'",
+          "SelectorCount": 1,
+          "Selectors": [
+            {
+              "CustomSelector": null,
+              "Elements": [
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": false,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "Chrome_WidgetWin_2"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Enabled",
+                      "Operation": "EqualTo",
+                      "Value": true
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": ""
+                    },
+                    {
+                      "Ignore": false,
+                      "IsOrdinal": false,
+                      "Name": "Name",
+                      "Operation": "EqualTo",
+                      "Value": "Save password"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Process",
+                      "Operation": "EqualTo",
+                      "Value": "msedge"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Visible",
+                      "Operation": "EqualTo",
+                      "Value": true
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": false,
+                  "Name": "Pane 'Save password'",
+                  "Tag": "pane"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": false,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "RootView"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Enabled",
+                      "Operation": "EqualTo",
+                      "Value": true
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": ""
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Name",
+                      "Operation": "EqualTo",
+                      "Value": "Save password"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Visible",
+                      "Operation": "EqualTo",
+                      "Value": true
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": false,
+                  "Name": "Text 'Save password'",
+                  "Tag": "text"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": false,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "NonClientView"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Enabled",
+                      "Operation": "EqualTo",
+                      "Value": true
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": ""
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Name",
+                      "Operation": "EqualTo",
+                      "Value": ""
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Process",
+                      "Operation": "EqualTo",
+                      "Value": "msedge"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Visible",
+                      "Operation": "EqualTo",
+                      "Value": true
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": false,
+                  "Name": "Pane 'NonClientView'",
+                  "Tag": "pane"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": false,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "BubbleFrameView"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Enabled",
+                      "Operation": "EqualTo",
+                      "Value": true
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": ""
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Name",
+                      "Operation": "EqualTo",
+                      "Value": ""
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Process",
+                      "Operation": "EqualTo",
+                      "Value": "msedge"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Visible",
+                      "Operation": "EqualTo",
+                      "Value": true
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": false,
+                  "Name": "Pane 'BubbleFrameView'",
+                  "Tag": "pane"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": false,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "DialogClientView"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Enabled",
+                      "Operation": "EqualTo",
+                      "Value": true
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": ""
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Name",
+                      "Operation": "EqualTo",
+                      "Value": ""
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Process",
+                      "Operation": "EqualTo",
+                      "Value": "msedge"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Visible",
+                      "Operation": "EqualTo",
+                      "Value": true
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": false,
+                  "Name": "Pane 'DialogClientView'",
+                  "Tag": "pane"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": false,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "MdTextButton"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Enabled",
+                      "Operation": "EqualTo",
+                      "Value": true
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": ""
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "IsDefault",
+                      "Operation": "EqualTo",
+                      "Value": false
+                    },
+                    {
+                      "Ignore": false,
+                      "IsOrdinal": false,
+                      "Name": "Name",
+                      "Operation": "EqualTo",
+                      "Value": "Never"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Visible",
+                      "Operation": "EqualTo",
+                      "Value": true
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": false,
+                  "Name": "Button 'Never'",
+                  "Tag": "button"
+                }
+              ],
+              "Ignore": false,
+              "ImageSelector": null,
+              "IsCustom": false,
+              "IsImageBased": false,
+              "IsWindowsInstance": false,
+              "Name": "Default Selector",
+              "Properties": []
+            }
+          ],
+          "Tag": "button",
+          "ScreenshotPath": "controlRepo-screenshots\\fb252701-24d7-4fab-92b5-dcdf1c4d2bfc.png"
+        }
+      ],
+      "Handle": {
+        "value": 0
+      },
+      "ProcessName": null,
+      "ScreenShot": null,
+      "ElementTypeName": "Window",
+      "InstanceId": "15f246c4-7f8a-40fc-b146-74a0341a3e2c",
+      "Name": "Window 'Project  ...  1 - Microsoft​ Edge'",
+      "SelectorCount": 1,
+      "Selectors": [
+        {
+          "CustomSelector": null,
+          "Elements": [
+            {
+              "Attributes": [
+                {
+                  "Ignore": true,
+                  "IsOrdinal": false,
+                  "Name": "Class",
+                  "Operation": "EqualTo",
+                  "Value": "Chrome_WidgetWin_1"
+                },
+                {
+                  "Ignore": true,
+                  "IsOrdinal": false,
+                  "Name": "Enabled",
+                  "Operation": "EqualTo",
+                  "Value": true
+                },
+                {
+                  "Ignore": true,
+                  "IsOrdinal": false,
+                  "Name": "Id",
+                  "Operation": "EqualTo",
+                  "Value": ""
+                },
+                {
+                  "Ignore": false,
+                  "IsOrdinal": false,
+                  "Name": "Name",
+                  "Operation": "EqualTo",
+                  "Value": "Project Timesheets - Contoso TimeLog - Profile 1 - Microsoft​ Edge"
+                },
+                {
+                  "Ignore": true,
+                  "IsOrdinal": true,
+                  "Name": "Ordinal",
+                  "Operation": "EqualTo",
+                  "Value": 0
+                },
+                {
+                  "Ignore": false,
+                  "IsOrdinal": false,
+                  "Name": "Process",
+                  "Operation": "EqualTo",
+                  "Value": "msedge"
+                },
+                {
+                  "Ignore": true,
+                  "IsOrdinal": false,
+                  "Name": "Visible",
+                  "Operation": "EqualTo",
+                  "Value": true
+                }
+              ],
+              "CustomValue": null,
+              "Ignore": false,
+              "Name": "Window 'Project Timesheets - Contoso TimeLog - Profile 1 - Microsoft​ Edge'",
+              "Tag": "window"
+            }
+          ],
+          "Ignore": false,
+          "ImageSelector": null,
+          "IsCustom": false,
+          "IsImageBased": false,
+          "IsWindowsInstance": false,
+          "Name": "Default Selector",
+          "Properties": []
+        }
+      ],
+      "Tag": "window",
+      "ScreenshotPath": "controlRepo-screenshots\\fed1cdb0-1c77-4673-9e94-e0ecd07a1c2b.png"
+    },
+    {
+      "Controls": [
+        {
+          "AutomationProtocol": "uia3",
+          "ScreenShot": null,
+          "ElementTypeName": "Table data cell",
+          "InstanceId": "a64d8e86-9929-4e17-9077-781673f115fc",
+          "Name": "Table data cell 'Project Insight'",
+          "SelectorCount": 1,
+          "Selectors": [
+            {
+              "CustomSelector": null,
+              "Elements": [
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": false,
+                  "Name": "Body 'TimeLog Home Invoices Projects Privacy Active Loans  ...  31-Mar-2023 2200 © 2022 - Contoso TimeLog - Privacy'",
+                  "Tag": "body"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "container"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": false,
+                  "Name": "Div 'Active Loans Project Code Project Name Broker  ...  Peter Northbridge 1-Mar-2023 31-Mar-2023 2200'",
+                  "Tag": "div"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "pb-3"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": false,
+                  "Name": "Main content 'Active Loans Project Code Project Name Broker  ...  Peter Northbridge 1-Mar-2023 31-Mar-2023 2200'",
+                  "Tag": "main"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "text-center"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": false,
+                  "Name": "Div 'Active Loans Project Code Project Name Broker  ...  Peter Northbridge 1-Mar-2023 31-Mar-2023 2200'",
+                  "Tag": "div"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": "table"
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": false,
+                  "Name": "Table 'Project Code Project Name Broker Period Start  ...  Peter Northbridge 1-Mar-2023 31-Mar-2023 2200'",
+                  "Tag": "table"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": false,
+                  "Name": "Table body '10002223 Project TechBridge Janice Li 1-Mar-2023  ...  Peter Northbridge 1-Mar-2023 31-Mar-2023 2200'",
+                  "Tag": "tbody"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 0
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": false,
+                  "Name": "Table row '10002233 Project Insight Li, Janice 1-Mar-2023 31-Mar-2023 1812'",
+                  "Tag": "tr"
+                },
+                {
+                  "Attributes": [
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Class",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Id",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    },
+                    {
+                      "Ignore": false,
+                      "IsOrdinal": true,
+                      "Name": "Ordinal",
+                      "Operation": "EqualTo",
+                      "Value": 19
+                    },
+                    {
+                      "Ignore": true,
+                      "IsOrdinal": false,
+                      "Name": "Title",
+                      "Operation": "EqualTo",
+                      "Value": null
+                    }
+                  ],
+                  "CustomValue": null,
+                  "Ignore": false,
+                  "Name": "Table data cell 'Project Insight'",
+                  "Tag": "td"
+                }
+              ],
+              "Ignore": false,
+              "ImageSelector": null,
+              "IsCustom": false,
+              "IsImageBased": false,
+              "IsWindowsInstance": false,
+              "Name": "Default Selector",
+              "Properties": []
+            }
+          ],
+          "Tag": "td",
+          "ScreenshotPath": "controlRepo-screenshots\\b2523925-de9a-4659-9dce-11817d160e3e.png"
+        }
+      ],
+      "Handle": {
+        "value": 0
+      },
+      "ProcessName": null,
+      "ScreenShot": null,
+      "ElementTypeName": "Web Page",
+      "InstanceId": "bf8c9e5b-eee9-4342-a1cd-d9c8c294d6f4",
+      "Name": "Web Page 'h ... t/Projects'",
+      "SelectorCount": 1,
+      "Selectors": [
+        {
+          "CustomSelector": null,
+          "Elements": [
+            {
+              "Attributes": [],
+              "CustomValue": "domcontainer",
+              "Ignore": false,
+              "Name": "Web Page 'https://contosotimelog.azurewebsites.net/Projects'",
+              "Tag": "domcontainer"
+            }
+          ],
+          "Ignore": false,
+          "ImageSelector": null,
+          "IsCustom": false,
+          "IsImageBased": false,
+          "IsWindowsInstance": false,
+          "Name": "Default Selector",
+          "Properties": []
+        }
+      ],
+      "Tag": "domcontainer",
+      "ScreenshotPath": "controlRepo-screenshots\\693e6e32-69aa-4f44-b260-ef2a121ae25d.png"
+    }
+  ],
+  "Version": 1
+}
