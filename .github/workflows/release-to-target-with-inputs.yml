@@ -64,6 +64,10 @@ jobs:
     - name: setup-power-platform-actions
       uses: microsoft/powerplatform-actions/actions-install@v1
 
+    - name: Pack Robin Scripts
+      run: .github/workflows/scripts/repack-robinscript.ps1 -folderName ${{ github.event.inputs.solution_folder}}/${{ github.event.inputs.solution_name }}/Workflows
+      shell: pwsh 
+
     - name: Pack solution
       uses: microsoft/powerplatform-actions/pack-solution@v1
       with:
