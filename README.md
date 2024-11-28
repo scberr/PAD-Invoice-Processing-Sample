@@ -1,4 +1,4 @@
-# Invoice Validation & Processing
+# Power Automate Desktop - Invoice Processing Sample
 A sample project demonstrating Power Automate RPA principles with some reusable scripts, components and examples.
 
 ## Managing Desktop Flows Under Source Control
