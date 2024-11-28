@@ -1,3 +1,11 @@
+##########################################################
+#
+# This script will unpack the Robin script in *.data.xml
+# files in the specified directory into *.data.robin 
+# files.
+#
+##########################################################
+
 param (
     [string]$folderName
 )

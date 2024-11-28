@@ -1,3 +1,11 @@
+##########################################################
+#
+# This script will read all *.data.robin files in the 
+# specified  folder and pack them into their associated 
+# *.data.xml files.
+#
+##########################################################
+
 param (
     [string]$folderName
 )
@@ -14,8 +22,6 @@ Get-ChildItem -Path $folderName -Filter *.robin | ForEach-Object {
     $robinFile = $_.FullName
     [string]$robinContent = Get-Content -Path $robinFile  -Encoding UTF8
         
-    #Write-Host "Read " + $robinContent
-
     $xmlFile = [System.IO.Path]::ChangeExtension($robinFile, ".xml")
     [xml]$xmlContent = Get-Content -Path $xmlFile
     
