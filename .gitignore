@@ -3,3 +3,10 @@
 ################################################################################
 
 /.vs
+/website/ContosoTimeLog/.vs/ContosoTimeLog
+/website/ContosoTimeLog/TimeLogWebsite/bin/Debug/net9.0
+/website/ContosoTimeLog/TimeLogWebsite/obj
+/website/ContosoTimeLog/TimeLogWebsite/bin/Release/net9.0
+/website/ContosoTimeLog/TimeLogWebsite/Properties/PublishProfiles
+/website/ContosoTimeLog/TimeLogWebsite/Properties/ServiceDependencies/contosotimelog - Web Deploy
+/website/ContosoTimeLog/TimeLogWebsite/TimeLogWebsite.csproj.user
